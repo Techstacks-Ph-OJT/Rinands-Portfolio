@@ -1,5 +1,15 @@
 @import url(//db.onlinewebfonts.com/c/ee83134559a4f33cac174cf72426289c?family=FF+Real+Head);
 
+@font-face {
+    font-family: "FF Real Head"; 
+    src: url("//db.onlinewebfonts.com/t/ee83134559a4f33cac174cf72426289c.eot"); 
+    src: url("//db.onlinewebfonts.com/t/ee83134559a4f33cac174cf72426289c.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/ee83134559a4f33cac174cf72426289c.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/ee83134559a4f33cac174cf72426289c.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/ee83134559a4f33cac174cf72426289c.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/ee83134559a4f33cac174cf72426289c.svg#FF Real Head") format("svg"); 
+}
+
 :root {
     --color1: #ffffff;
     --color2: #f5c257;
@@ -7,6 +17,7 @@
     --color4: #f5ae42;
     --color5: #424658;
     --color6: #252730;
+    --color7: #161720;
     --bgcolor: #242734;
     --mainheight: 90vh;
     --mainfont: 'RealHeadWebW04-Medium';
@@ -644,7 +655,7 @@
         overflow: hidden;
         display: flex;
         padding: 7%;
-        background-color: #161720;
+        background-color: var(--color7);
     }
     .certi-containers .certi-img-inside{
         display: inline-block;
