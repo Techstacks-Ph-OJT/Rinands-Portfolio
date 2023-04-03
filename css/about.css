@@ -1,0 +1,292 @@
+:root {
+    --color1: #ffffff;
+    --color2: #f5c257;
+    --color3: #b7b7b7;
+    --color4: #f5ae42;
+    --color5: #424658;
+    --color6: #252730;
+    --color7: #161720;
+    --bgcolor: #242734;
+    --mainheight: 90vh;
+    --mainfont: 'RealHeadWebW04-Medium';
+    --secondaryfont: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --textsize: clamp(0.625rem, 0.4605rem + 0.8772vw, 1.25rem);
+    --titlesize: clamp(1.375rem, 1.1612rem + 1.1404vw, 2.1875rem);
+    --semisize: clamp(0.75rem, 0.5855rem + 0.8772vw, 1.375rem);
+    --namesize: clamp(2.8125rem, 2.0724rem + 3.9474vw, 5.625rem);
+    --parasize: clamp(0.75rem, 0.6842rem + 0.3509vw, 1rem);
+}
+.first-main-about{
+    display: flex;
+    padding: 1.42% 1% 0 0;
+    gap: 0px;
+}
+.marquee{
+    margin: auto auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color7);
+    height: fit-content;
+    color: var(--color3);
+    font-size: 80px;
+    font-style: italic;
+}
+.marquee .marquee-para{
+    display: inline-block;
+    animation: myanimation 7s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+}
+@keyframes myanimation {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-900%); }
+}
+.about-left-container{
+    flex: 2;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.span-style{
+    color: var(--color2);
+}
+.left-container-about{
+    flex: 1; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 30px; 
+    align-items: flex-start; 
+    color: var(--color1);
+}
+.left-container-about .title-container{
+    line-height: 50%;
+}
+.name-container{
+    line-height: 70px!important;
+    font-size: clamp(1.5625rem, 0.9868rem + 3.0702vw, 3.75rem)!important;
+}
+.about-right-container{
+    flex: 2;
+    align-self: center;
+}
+.button-style{
+    padding: 10px 30px; 
+    font-size: 15px; 
+    border-radius: 5px; 
+    border: none;
+    background-color: rgb(97, 78, 0);
+    color: var(--color1);
+}
+.box-muna{
+    background-color: var(--color2);
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+.second-main-about{
+    display: flex;
+    padding: 12.42% 10.42% 12.42%;
+    gap: 30px;
+    align-items: center;
+    background-color: var(--bgcolor);
+}
+.about-secondleft-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-secondright-container{
+    flex: 1;
+}
+.third-main-about{
+    display: flex;
+    gap: 30px;
+    padding: 12.42% 10.42% 12.42%;
+}
+.about-thirdleft-container{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+.about-thirdright-container{
+    flex: 1;
+}
+.boxs-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    height: 400px;
+}
+.boxs2-container{
+    width: 50%;
+    height: 400px;
+}
+.box-muna2{
+    background-color: var(--color2);
+    width: 100%;
+    height: 100%;
+}
+.box-muna3{
+    background-color: var(--color2);
+    width: 100%;
+    height: 100%;
+}
+.number-style-about{
+    font-size: 60px;
+    color: var(--color1);
+    text-shadow: 3px 2px 2px var(--color6);
+}
+.fourth-main-about{
+    display: flex;
+    gap: 30px;
+    padding: 12.42% 10.42% 12.42%;
+    background-color: var(--bgcolor);
+}
+.display-none{
+    display: none;
+}
+.relative-container{
+    position: relative;
+    padding-top: 68px;
+}
+.inside-flex-border-style{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.flex-border-style{
+    display: flex;
+    gap: 10px;
+}
+.border-style{
+    color: var(--color3);
+    border: 1px solid var(--color3);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: var(--semisize);
+}
+.fifth-main-about{
+    display: flex;
+    padding: 12.42% 10.42% 22.42%;
+    gap: 30px;
+}
+.about-fifthleft-container{
+    flex: 1;
+    position: relative;
+    height: 400px;
+}
+.about-fifthright-container{
+    flex: 1;
+}
+.remove{
+    display: none;
+}
+/* absolute position */
+
+.absolute-position{
+    position: absolute;
+    bottom: -30px; 
+    left: -20px;
+}
+.absolute-position2{
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+}
+.absolute-position3{
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+.absolute-position4{
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+}
+
+
+/* media query */
+@media (max-width: 1024px) {
+    .name-container {
+       line-height: 50px!important; /* adjust this for smaller screens */
+    }
+}
+@media (max-width: 726px) {
+    .second-main-about,.third-main-about, .fourth-main-about{
+        padding: 18.42% 10.42% 18.42%;
+    }
+    .fifth-main-about{
+        padding: 18.42% 10.42% 28.42%;
+    }
+    .first-main-about{
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .remove{
+        display: inline-block;
+    }
+    .classic, .about-secondright-container, .relative-container .absolute-position2{
+        display: none;
+    }
+    .second-main-about{
+        flex-direction: column-reverse;
+    }
+    .box-muna{
+        width: 100%;
+        height: 100%;
+    }
+    .title-container{
+        text-align: center;
+    }
+    .para-container{
+        text-align: justify;
+    }
+    .third-main-about, .fifth-main-about, .fourth-main-about{
+        flex-direction: column;
+    }
+    .about-secondright-container, .about-fifthleft-container{
+        flex: none;
+    }
+    .name-container{
+        padding: 4% 10.42% 7%;
+        margin-bottom: 0!important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    .relative-container{
+        padding-top: 0;
+        position: static;
+    }
+    .left-container-about{
+        position: relative;
+    }
+    .left-container-about .display-none{
+        display: block;
+    }
+}
+@media (max-width: 490px) {
+    .boxs-container, .boxs2-container, .about-fifthleft-container{
+        height: 300px;
+    }
+    .para-container{
+        text-align:start
+    }
+}
+@media (max-width: 480px) {
+    .name-container {
+       line-height: 35px!important; /* adjust this for even smaller screens */
+    }
+}
