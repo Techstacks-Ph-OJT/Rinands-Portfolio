@@ -142,6 +142,7 @@
     text-align: center;
     justify-content: center;
     width: 100%;
+    display: none;
 }
 
 /* second div */
@@ -655,6 +656,9 @@
     }
     .certified-container, .certi-container{
         display: none;
+    }
+    .hidden-container{
+        display: block;
     }
     .person-img{
         display: block;
