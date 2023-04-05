@@ -62,6 +62,9 @@
                 <div class="middle-container">
                     <img class="person-img" alt="person" src="img/front.png">
                 </div>
+                <div class="middle-container-secondary">
+                    <img class="person-img-secondary" alt="person" src="img/front.png">
+                </div>
                 <div class="right-container">
                     <div class="text-container">- Introduction</div>
                     <div class="title-container">
@@ -80,9 +83,16 @@
                     <div class="title-container">ORIGINAL</div>
                     <div class="para-container">Lorem ipsum dolor sit amet consectetur.</div>
                     <div class="para-container">Asperiores qui voluptatum corporis eum facilis deleniti</div>
+                    <a href="#scrolldown" style="cursor: pointer;">
+                        <svg class="arrows">
+                            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-            <div class="second-main">
+            <div id="scrolldown" class="second-main">
                 <div class="lr-container">
                     <div class="left-second-container">
                         <div class="ttp-container">
@@ -235,20 +245,26 @@
                     </div>
                     <div class="list-blog-container">
                         <div class="blog-container">
-                            <div class="para-container">Feb 26 &middot; Blog</div>
-                            <div class="semi-title">Let this be a lesson to you</div>
+                            <div style="gap: 30px; display: flex;">
+                                <div class="para-container date-para">Feb 26 &middot; Blog</div>
+                                <div class="semi-title">Building Your First Website: A Step-by-Step Guide</div>
+                            </div>
                             <div><button class="button button-arrow-hover">&#8594</button></div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="para-container">Feb 26 &middot; Blog</div>
-                            <div class="semi-title">Let this be a lesson to you</div>
+                            <div style="gap: 30px; display: flex;">
+                                <div class="para-container date-para">Feb 26 &middot; Blog</div>
+                                <div class="semi-title">Debugging Tips and Tricks for Web Developers</div>
+                            </div>
                             <div><button class="button button-arrow-hover">&#8594</button></div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="para-container">Feb 26 &middot; Blog</div>
-                            <div class="semi-title">Let this be a lesson to you</div>
+                            <div style="gap: 30px; display: flex;">
+                                <div class="para-container date-para">Feb 26 &middot; Blog</div>
+                                <div class="semi-title">Best Practices for Web Development Security</div>
+                            </div>
                             <div><button class="button button-arrow-hover">&#8594</button></div>
                         </div>
                     </div>
@@ -260,7 +276,7 @@
                     <div class="testimonial-words">
                         <div class="person-words">
                             <img class="quote-img" alt="quote" src="img/quote.svg">
-                            <div class="title-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eligendi. Minus harum earum quisquam distinctio aperiam vero debitis quasi et odio hic.</div>
+                            <div class="title-container">Rinand's work on a website development project exceeded my expectations. He paid close attention to the details and successfully brought my vision to life.</div>
                         </div>
                         <div class="hidden-testimonial-class">
                             <div class="testimonial2-img">
@@ -293,19 +309,21 @@
                         <button class="button button-arrow-hover">&#8594</button>
                     </div>
                 </div>
-                <div class="right-fifth-container">
+                <div class="right-fifth-container" style="gap: 15px;">
                     <div class="title-container pre-space">Estimate your project? Let me know here.</div>
-                    <div class="blog-container">
-                        <div class="semi-title">What's your name?</div>
-                    </div>
-                    <hr>
-                    <div class="blog-container">
-                        <div class="semi-title">Your fancy email</div>
-                    </div>
-                    <hr>
-                    <div class="blog-container">
-                        <div class="semi-title">Tell me about your project</div>
-                        <div><button class="button button-arrow-hover">&#8594</button></div>
+                    <div style="display: flex; flex-direction: column;">
+                        <div class="blog-container">
+                            <div class="semi-title">What's your name?</div>
+                        </div>
+                        <hr>
+                        <div class="blog-container">
+                            <div class="semi-title">Your fancy email</div>
+                        </div>
+                        <hr>
+                        <div class="blog-container">
+                            <div class="semi-title">Tell me about your project</div>
+                            <div><button class="button button-arrow-hover">&#8594</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,7 +332,7 @@
             <div class="footer-content">
                 <div class="with-logo">
                     <img class="logo-img" alt="logo" src="img/logo.png">
-                    <div class="para-container"><strong class="add-white">Thank you for scrolling,</strong> that's all folks</div>
+                    <div class="para-footer-container"><strong class="add-white">Thank you for scrolling,</strong> that's all folks</div>
                 </div>
                 <div class="icon-container">
                     <a href="https://www.facebook.com/johnrinand/"><img class="icon" alt="facebook" src="img/facebook.svg"></a>
@@ -324,6 +342,7 @@
                 </div>
             </div>
         </footer>
+        <div class="bottom-line"></div>
     </body>
     <script>
         function toggleMenu() {

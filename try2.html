@@ -1,0 +1,2413 @@
+<div class="about-wrapper" id="aboutlist-wrapper">
+    <h3 class="about-title">Over dit product</h3>
+    
+    <ul class="about-details--item">
+        <li>Leuk voor jullie eigen kleintje of om cadeau te doen!</li>
+        <li>Voeg jouw naam of geboortedatum toe</li>
+        <li>Verkrijgbaar in 9 kleuren</li>
+        <li>Levertijd 3 tot 4 werkdagen</li>
+    </ul>
+    </div>
+    
+    <div class="images-side-panel" id="images-side-panel">
+    <div class="close-wrapper"><button id="close-side-panel">X</button></div>
+    
+    <p class="choose-img-label">Kies een kleur</p>
+    
+    <div class="side-panel-wrapper" id="side-panel-wrapper">&nbsp;</div>
+    </div>
+    
+    <div class="back-drop" id="back-drop">&nbsp;</div>
+    <style type="text/css">/*--Dmytro new styles-*/
+      .scrol-navigation-button {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #fcf0e7;
+        border: 1px solid #d67e60;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        border-radius: 12px;
+        color: #d67e60;
+        font-size: 15px;
+        font-weight: 700;
+        height: 44px;
+        width: 171px;
+        position: absolute;
+        z-index: 11;
+        right: 10px;
+        bottom: 10px;
+      }
+      @media (max-width: 992px) {
+        .scrol-navigation-button {
+          display: flex;
+        }
+      }
+      #design__preview {
+        position: relative;
+      }
+      #options-container > .design_button_preview.sticky_bar_mob {
+        display: none !important;
+      }
+      .navigation-bar-group.navigation-bar-group-stars:nth-of-type(2) {
+        display: none !important;
+      }
+    
+      .edit-fields-title {
+        color: #d67e60;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .input-title-text {
+        font-family: "Poppins Medium",sans-serif !important;
+        display: block;
+        font-size: 16px;
+        margin-bottom: 0;
+        font-weight: 600;
+        color: #151515 !important;
+      }
+      .letterType {
+        font-family: "Poppins Medium",sans-serif !important;
+        color: #151515 !important;
+        font-weight: 600;
+      }
+      .input-title-text {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+    
+      .input-title-text span {
+        font-family: "Nunito", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        color: #666666;
+      }
+    
+      #design_title {
+        text-transform: capitalize;
+      }
+    
+      #design_title .edit-fields {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .text-field-input::placeholder {
+        color: #262626;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    
+      #design_title .edit-fields .dropdown-font:before {
+        content: "Lettertype";
+        display: block;
+        font-size: 16px;
+      }
+    
+      /*--/Dmytro new styles-*/
+    
+      .color-item {
+        border: 1px solid #cccccc;
+        border-radius: 34px;
+        box-sizing: border-box;
+        width: 34px;
+        height: 34px;
+        box-shadow: 0 2px 8px rgba(131, 131, 131, 0.24);
+        cursor: pointer;
+      }
+    
+      .color-item:hover {
+        box-shadow: 0px 0px 0px 2px #cbcbcb;
+      }
+    
+      .color-selected {
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 0 2px #666666;
+      }
+    
+      .color-pallet {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    
+      .color-pallet > * {
+        flex: 0 50%;
+      }
+    
+      .color-pallet-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+    
+      .color-pallet-text-label {
+        font-size: 16px;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+      }
+    
+      .color-pallet-text-label-content {
+        padding-left: 10px;
+        font-weight: 500;
+        font-size: 15px;
+      }
+    
+      /* Style The Dropdown Button */
+      .dropbtn {
+        color: #262626;
+        padding: 16px;
+        font-size: 16px;
+        cursor: pointer;
+        gap: 12px;
+        width: 100%;
+        max-width: 420px;
+        height: 48px;
+        background: #ffffff;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #e6e6e6;
+        border-radius: 4px 0 0 4px;
+        text-align: left;
+        line-height: 1.3;
+        position: relative;
+      }
+    
+      .dropbtn:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        z-index: 9;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        background: transparent;
+        border: 0 solid transparent;
+        border-left-width: 6px;
+        border-right-width: 6px;
+        border-top: 5px solid #262626;
+      }
+    
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown-font {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .dropdown-font > * {
+        flex: 0 50%;
+      }
+    
+      .btn-content-wrapper {
+        position: relative;
+      }
+    
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-font-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+      }
+    
+      /* Links inside the dropdown */
+      .dropdown-font-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+    
+      /* Change color of dropdown links on hover */
+      .dropdown-font-content a:hover {
+        background-color: #f1f1f1;
+      }
+    
+      /* Show the dropdown menu on hover */
+      .dropdown-font-content.active {
+        display: block;
+        overflow: hidden;
+        overflow-y: auto;
+        max-height: 950px;
+      }
+    
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown-font:hover .dropbtn {
+        background-color: #fff;
+      }
+    
+      .product-container {
+        width: 100%;
+        margin-bottom: 24px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+    
+      .product-item {
+        display: inline-block;
+      }
+    
+      .product-image {
+        width: 60px;
+        height: 60px;
+        margin-top: 0px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    
+      .product-image.active {
+        border: 1px solid #262626;
+      }
+    
+      .text-field-input {
+        color: #262626;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        box-sizing: border-box;
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 12px 12px 16px;
+        gap: 12px;
+        width: 100%;
+        max-width: 420px;
+        height: 48px;
+        background: #ffffff;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #e6e6e6;
+        border-radius: 4px 0px 0px 4px;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin-top: 5px;
+      }
+    
+      .text-field-input::placeholder {
+        color: #a7a7a7;
+      }
+    
+      /* new styles here */
+      ul.about-details--item {
+        list-style-type: none;
+        padding-left: 8px;
+        margin: 0;
+        font-family: "Nunito", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        color: #262626;
+      }
+    
+      ul.about-details--item li {
+        position: relative;
+        padding-left: 18px;
+        font-family: "Poppins Light",sans-serif;
+        color: #444 !important;
+        font-weight: 300;
+      }
+    
+      ul.about-details--item li::before {
+        position: absolute;
+        left: 0;
+        content: "\e5ca";
+        font-family: Shopicons;
+        padding-right: 8px;
+        color: #c66d55;
+      }
+      .about-wrapper{
+        margin-bottom: 15px;
+      }
+    
+      .box-body {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      #options-container {
+        padding: 24px 32px;
+        background: #fff;
+        box-shadow: 0px 2px 8px rgb(131 131 131 / 24%);
+        border-radius: 10px;
+      }
+    
+      .form-input-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .form-input-group > * {
+        flex: 0 50%;
+      }
+    
+      .form-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    
+      label {
+        margin-bottom: 0;
+      }
+    
+      .about-title {
+        font-family: "Poppins Medium",sans-serif!important;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #262626;
+      }
+    
+      #btn-more-image {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border: 1px solid #262626;
+        border-radius: 40px;
+    
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: #262626;
+      }
+    
+      #btn-more-color {
+        position: relative;
+        background: #fff;
+        border: 1px solid #262626;
+        border-radius: 40px;
+        width: 34px;
+        height: 34px;
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: #262626;
+        white-space: nowrap;
+      }
+    
+      .color-popup-wrapper {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        background-color: white;
+        padding: 16px;
+        box-shadow: 0px 2px 8px rgb(131 131 131 / 24%);
+        border-radius: 12px;
+        position: absolute;
+        right: 0;
+        top: 34px;
+        max-width: 360px;
+        z-index: 3000;
+      }
+    
+      .images-side-panel {
+        position: fixed;
+        right: -150px;
+        top: 0;
+        z-index: 3000;
+        height: 100vh;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        width: 0;
+        max-width: 432px;
+        border-radius: 12px 0px 0px 12px;
+        padding: 80px 40px;
+        box-shadow: 0px 2px 8px rgb(131 131 131 / 24%);
+        visibility: hidden;
+        transition: 0.5s ease-in-out;
+      }
+    
+      button#close-side-panel {
+        background-color: transparent;
+        border-radius: 20px;
+        width: 36px;
+        height: 36px;
+        border: none;
+        color: #7a7a7a;
+      }
+    
+      div#side-panel-wrapper {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+    
+      .side-panel-wrapper .product-item {
+        width: 112px;
+        height: 112px;
+        pointer-events: none;
+      }
+    
+      .side-panel-wrapper .product-item a {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border: 1px solid #e6e6e6;
+        border-radius: 4px;
+        padding: 8px;
+        pointer-events: all;
+      }
+    
+      .side-panel-wrapper .product-item a.active {
+        border: 1px solid #262626;
+      }
+    
+      .side-panel-wrapper .product-item .product-image.active {
+        border: none;
+      }
+    
+      .back-drop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2000;
+        visibility: hidden;
+        transition: visibility 0.2s ease;
+      }
+    
+      .choose-image-wrapper p.images-label {
+        font-family: "Poppins Medium",sans-serif!important;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        color: #262626;
+      }
+    
+      .choose-image-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    
+      .choose-image-wrapper p.selected-image-label {
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #262626;
+        cursor: pointer;
+      }
+    
+      p.choose-img-label {
+        text-align: left;
+        width: 100%;
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #262626;
+      }
+    
+      .colors-panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    
+      .color-popup-wrapper .close-wrapper {
+        width: 100%;
+        text-align: right;
+      }
+    
+      button#close-color-panel {
+        border: none;
+        background: none;
+      }
+    
+      p.choose-color {
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 24px;
+        color: #262626;
+      }
+    
+      .color-label-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    
+      p.selected-color {
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        color: #666666;
+      }
+    
+      .color-popup-head {
+        width: 100%;
+      }
+    
+      div.font-head {
+        display: none;
+      }
+    
+      a.dropdown-font-content-item:hover::after,
+      a.dropdown-font-content-item:focus::after,
+      a.dropdown-font-content-item:active::after,
+      a.dropdown-font-content-item.active::after {
+        content: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.25002 14.8225L4.42752 11L3.12585 12.2925L8.25002 17.4166L19.25 6.41665L17.9575 5.12415L8.25002 14.8225Z' fill='%231F1F1F'/%3E%3C/svg%3E");
+        float: right;
+      }
+    
+      @media (min-width: 768px) and (max-width: 1248px) {
+        .form-input-group,
+        .dropdown-font,
+        .color-pallet {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 6px;
+        }
+    
+        .btn-content-wrapper {
+          width: 100%;
+        }
+      }
+    
+      @media (max-width: 768px) {
+        div.font-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        div.font-list {
+          overflow-y: auto;
+          z-index: 5000;
+        }
+    
+        .choose-font {
+          font-family: "Nunito", sans-serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 24px;
+          color: #262626;
+          margin-bottom: 0;
+        }
+    
+        .btn-close-font {
+          border: none;
+          background-color: transparent;
+        }
+    
+        .product-container {
+          justify-content: flex-start;
+          align-items: center;
+        }
+    
+        #btn-more-image,
+        #btn-more-color {
+          width: 44px;
+          height: 44px;
+        }
+    
+        #options-container {
+          padding: 16px;
+        }
+    
+        .form-input-group,
+        .dropdown-font,
+        .color-pallet {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 6px;
+        }
+    
+        .btn-content-wrapper {
+          width: 100%;
+        }
+    
+        .color-item {
+          width: 44px;
+          height: 44px;
+        }
+    
+        .images-side-panel {
+          padding: 24px;
+          top: unset;
+          right: 0;
+          bottom: -100%;
+          width: 100%;
+          border-radius: 12px 12px 0 0;
+          height: auto;
+          transition: all 0.3s ease;
+        }
+    
+        span.img-label {
+          font-family: "Nunito", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 20px;
+          color: #262626;
+          text-align: center;
+        }
+    
+        .back-drop {
+          background-color: rgba(0, 0, 0, 0.25);
+        }
+    
+        button#close-side-panel {
+          border: none;
+          background-color: transparent;
+        }
+    
+        .close-wrapper {
+          position: absolute;
+          top: 12px;
+          right: 14px;
+        }
+    
+        .product-container .product-item .product-image {
+          width: 60px;
+          height: 60px;
+        }
+    
+        .side-panel-wrapper .product-item {
+          width: 84px;
+          height: 100px;
+        }
+    
+        .side-panel-wrapper .product-item .product-image {
+          width: 60px;
+          height: 60px;
+        }
+    
+        .color-popup-wrapper {
+          display: flex;
+          width: 100%;
+          max-width: fit-content;
+          position: fixed;
+          bottom: -100%;
+          padding: 24px;
+          top: unset;
+          left: 0;
+          border-radius: 12px 12px 0 0;
+          transition: all 0.3s;
+        }
+    
+        .colors-panel {
+          justify-content: space-between;
+        }
+    
+        .dropdown-font-content {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          position: fixed;
+          top: unset;
+          bottom: -100%;
+          left: 0;
+          border-radius: 12px 12px 0 0;
+          z-index: 3000;
+          padding: 24px;
+          height: 75vh;
+          max-height: 75vh;
+          transition: all 0.3s ease;
+        }
+    
+        .dropdown-font-content.active {
+          max-height: 75vh;
+          display: flex;
+          flex-direction: column;
+          overflow-y: hidden;
+          gap: 16px;
+        }
+    
+        .dropdown-font-content a {
+          padding: 10px 16px;
+          font-size: 22px;
+          line-height: 26px;
+          font-weight: 400;
+        }
+    
+        a.dropdown-font-content-item:hover {
+          background-color: #f7f7f7;
+        }
+      }
+    
+      @media (max-width: 400px) {
+        .color-pallet-wrapper .color-item {
+          width: 38px;
+          height: 38px;
+        }
+    
+        .product-container .product-item .product-image {
+          /*      width: 54px;
+                                      height: 54px;*/
+        }
+    
+        .side-panel-wrapper .product-item {
+          width: 74px;
+          height: 88px;
+          pointer-events: none;
+        }
+    
+        .side-panel-wrapper .product-item .product-image {
+          width: 50px;
+          height: 45px;
+        }
+    
+        span.img-label {
+          font-size: 12px;
+        }
+    
+        .box-footer {
+          display: none;
+        }
+      }
+      /* end new styles */
+    </style>
+    <script>
+      const fonts = [
+        {
+          font: "Abril Fatface",
+          url: "AbrilFatface-Regular.otf",
+          format: "opentype",
+        },
+        {
+          font: "Allison Script",
+          url: "2021-09-30/Allison-script-regular.ttf",
+          format: "truetype",
+        },
+        {
+          font: "Josefin Sans",
+          url: "google/JosefinSans-Italic.ttf",
+          format: "truetype",
+        },
+        {
+          font: "Josefin Slab",
+          url: "google/JosefinSlab-Italic.ttf",
+          format: "truetype",
+        },
+        {
+          font: "Unna",
+          url: "rich-text-fonts/Unna/Unna-Bold.ttf",
+          format: "truetype",
+        },
+        {
+          font: "Signature Collection",
+          url: "SignatureCollection.otf",
+          format: "opentype",
+        },
+      ];
+    
+      const colors = [
+        { color: "0f0d36", label: "Donkerblauw" },
+        { color: "492f15", label: "Donkerbruin" },
+        { color: "838181", label: "Donkergrijs" },
+        { color: "d91e65", label: "Fuchsia" },
+        { color: "fffffa", label: "Gebroken wit" },
+        { color: "d4af37", label: "Goud" },
+        { color: "008330", label: "Groen" },
+        { color: "003798", label: "Koninklijk blauw" },
+        { color: "a7c5d3", label: "Lichtblauw" },
+        { color: "ccccd1", label: "Lichtgrijs" },
+        { color: "ebb1b7", label: "Lichtroze" },
+        { color: "5c3286", label: "Paars" },
+        { color: "ce000c", label: "Rood" },
+        { color: "3fc7e2", label: "Turquoise" },
+        { color: "ffffff", label: "Wit" },
+        { color: "000000", label: "Zwart" },
+        { color: "b36969", label: "Roetsroze" },
+        { color: "efefed", label: "Zand" },
+        { color: "7c9188", label: "Bosgroen" },
+        { color: "c8aa3c", label: "Okergeel" },
+        { color: "dec1bd", label: "Soft pink" },
+        { color: "687180", label: "Ocean blue" },
+      ];
+    
+      const products = [
+        {
+          product: "erinnerungsbox",
+          base: "/produkte-holzgravur/erinnerungsbox/",
+          price: "54,95",
+          label: "40 x 30 cm",
+        },
+        {
+          product: "kartenbox-danke",
+          base: "/produkte-holzgravur/kartenbox/",
+          price: "59,95",
+          label: "29 x 21,5 cm",
+        },
+      ];
+    
+      const isMobile = window.matchMedia("(max-width: 768px)");
+      const isWideScreen = window.matchMedia("(min-width: 1600px)");
+    
+      const designId = window.location.pathname.split("/")[3];
+      const bodyClasses = document.body.classList;
+      // setParams()
+    
+      // function setParams() {
+      //   let params = new URL(document.location).searchParams
+      //   name = params.get("name")
+      //   font = params.get("font")
+      //   color = params.get("color")
+      // }
+    
+      document.addEventListener("DOMContentLoaded", function () {
+        button = document.querySelector("#choose_preview");
+        button.title = "Pas de text aan en ga verder";
+        button.style.color = "white";
+        button.disabled = true;
+    
+        button.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M11.92 9.5H13.92V6.5H16.92V4.5H13.92V1.5H11.92V4.5H8.92004V6.5H11.92V9.5ZM7.92004 18.5C6.82004 18.5 5.93004 19.4 5.93004 20.5C5.93004 21.6 6.82004 22.5 7.92004 22.5C9.02004 22.5 9.92004 21.6 9.92004 20.5C9.92004 19.4 9.02004 18.5 7.92004 18.5ZM17.92 18.5C16.82 18.5 15.93 19.4 15.93 20.5C15.93 21.6 16.82 22.5 17.92 22.5C19.02 22.5 19.92 21.6 19.92 20.5C19.92 19.4 19.02 18.5 17.92 18.5ZM9.02004 13.5H16.47C17.22 13.5 17.88 13.09 18.22 12.47L22.08 5.46L20.34 4.5L16.47 11.5H9.45004L5.19004 2.5H1.92004V4.5H3.92004L7.52004 12.09L6.17004 14.53C5.44004 15.87 6.40004 17.5 7.92004 17.5H19.92V15.5H7.92004L9.02004 13.5Z" fill="white"/>
+                                          </svg> <span> In winkelmandje</span>`;
+    
+        let optionsContainer = document.createElement("div");
+        optionsContainer.setAttribute("id", "options-container");
+    
+        formDiv = document.createElement("div");
+        formDiv.classList = ["edit-fields"];
+        const FontCssCode = fontCss();
+    
+        let editFieldsTitle = document.createElement("p");
+        editFieldsTitle.classList = ["edit-fields-title"];
+        editFieldsTitle.textContent = "Personaliseer jouw box";
+    
+        designContainer = document.getElementById("design_title");
+    
+        let btnPreview = document.getElementsByClassName(
+          "design_button_preview"
+        )[0];
+        let addCollection = document.getElementsByClassName("add_to_collection")[0];
+        let aboutList = document.getElementById("aboutlist-wrapper");
+    
+        formFields = document.createElement("div");
+        formFields.classList = ["form-fields"];
+    
+        formDiv.appendChild(editFieldsTitle);
+        formDiv.appendChild(FontCssCode);
+        formDiv.appendChild(formFields);
+    
+        // main container for options card
+        optionsContainer.appendChild(formDiv);
+        optionsContainer.appendChild(btnPreview);
+        optionsContainer.appendChild(addCollection);
+        optionsContainer.appendChild(aboutList);
+    
+        const refNod = document.getElementById("design_title");
+    
+        refNod.parentNode.insertBefore(optionsContainer, refNod.nextSibling);
+    
+        productPlacement();
+    
+        const adjustProductListWithDebounce = debounce(productList, 100);
+        window.addEventListener("resize", adjustProductListWithDebounce);
+    
+        moveAboutListWrapper();
+        //moveSliderToDesignLeft();
+    
+        //IETS MEE DOEN!!!! LATER, ging stuk met aanpassing productlijst
+    
+        // setTimeout(() => {
+        //   handleSeeMoreImage()
+        //   moveExtraImagesToBody()
+        // }, 1800)
+    
+        setTimeout(() => closeSidePanel(), 2500);
+        addTextFields().then((t) => {
+          updateFields();
+        });
+      });
+    
+      /* added js */
+      function moveSliderToDesignLeft() {
+        let sliderWrapper = document.getElementsByClassName("card_swiper_rail")[0];
+    
+        let designLeft = document.getElementsByClassName("design-left")[0];
+        let midBottomWrapper = document.querySelectorAll(
+          ".design_page__bottom_wrapper .container .cols .xs-12"
+        );
+    
+        if (!isMobile.matches) {
+          designLeft.appendChild(sliderWrapper);
+        } else {
+          midBottomWrapper[0].appendChild(sliderWrapper);
+        }
+    
+        isMobile.onchange = (evt) => {
+          if (!isMobile.matches) {
+            designLeft.appendChild(sliderWrapper);
+          } else {
+            midBottomWrapper[0].appendChild(sliderWrapper);
+          }
+        };
+      }
+    
+      function moveAboutListWrapper() {
+        const refNod = document.getElementsByClassName("add_to_collection")[0];
+      }
+    
+      function moveExtraImagesToBody() {
+        const extraImages = document.getElementById("images-side-panel");
+        const bdrop = document.getElementById("back-drop");
+        document.body.appendChild(extraImages);
+        document.body.appendChild(bdrop);
+      }
+    
+      function closeSidePanel() {
+        const closeSidePanel = document.getElementById("close-side-panel");
+        let sp = document.getElementById("images-side-panel");
+    
+        let bdrop = document.getElementById("back-drop");
+    
+        closeSidePanel.onclick = () => {
+          if (!isMobile.matches) {
+            sp.style.width = "0";
+            sp.style.right = "-150px";
+          }
+    
+          if (isMobile.matches) {
+            sp.style.bottom = "-100%";
+          }
+    
+          sp.style.visibility = "hidden";
+          bdrop.style.visibility = "hidden";
+        };
+    
+        bdrop.onclick = () => {
+          if (!isMobile.matches) {
+            let colorWrapper = document.getElementById("color-popup-wrapper");
+            let fontOptionList = document.getElementById("dropdown-font-content");
+            let fontDropdown = document.getElementById("dropdown-font");
+    
+            sp.style.width = "0";
+            sp.style.right = "-150px";
+    
+            if (colorWrapper) {
+              if (colorWrapper.style.display === "flex") {
+                colorWrapper.style.display = "none";
+              }
+            }
+    
+            if (fontDropdown && fontOptionList) {
+              if (fontOptionList.classList.contains("active")) {
+                fontDropdown.style.zIndex = "0";
+                fontOptionList.classList.remove("active");
+                bdrop.style.visibility = "hidden";
+              }
+            }
+          }
+    
+          if (isMobile.matches) {
+            let cp = document.getElementById("color-popup-wrapper");
+            let fontdd = document.getElementById("dropdown-font-content");
+    
+            if (cp) {
+              cp.style.bottom = "-100%";
+            }
+    
+            if (fontdd) {
+              fontdd.style.bottom = "-100%";
+            }
+    
+            sp.style.bottom = "-100%";
+            bdrop.style.visibility = "hidden";
+          }
+    
+          sp.style.visibility = "hidden";
+          bdrop.style.visibility = "hidden";
+        };
+      }
+    
+      function handleSeeMoreImage() {
+        const btnSeeMoreImage = document.getElementById("btn-more-image");
+        const sidePanel = document.getElementById("images-side-panel");
+        const bdrop = document.getElementById("back-drop");
+        const selectedImageLabel = document.getElementsByClassName(
+          "selected-image-label"
+        )[0];
+    
+        const handleShowImage = () => {
+          sidePanel.style.visibility = "visible";
+          bdrop.style.visibility = "visible";
+          bdrop.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    
+          if (!isMobile.matches) {
+            sidePanel.style.width = "100%";
+            sidePanel.style.right = "0";
+          }
+    
+          if (isMobile.matches) {
+            sidePanel.style.bottom = "0";
+          }
+        };
+    
+        btnSeeMoreImage.onclick = () => {
+          handleShowImage();
+        };
+    
+        selectedImageLabel.onclick = () => {
+          handleShowImage();
+        };
+      }
+    
+      function handleSeeMoreColor() {
+        const btnSeeMoreColor = document.getElementById("btn-more-color");
+        const btnCloseColors = document.getElementById("close-color-panel");
+        const bdrop = document.getElementById("back-drop");
+        const colorsWrapper = document.getElementById("color-popup-wrapper");
+    
+        colorsWrapper.onclick = (e) => {
+          e.stopPropagation();
+        };
+    
+        const handleShow = () => {
+          if (
+            !colorsWrapper.style.display ||
+            colorsWrapper.style.display === "none"
+          ) {
+            colorsWrapper.style.display = "flex";
+            colorsWrapper.style.width = `${
+              colors.slice(6, colors.length).length * 54
+            }px`;
+            bdrop.style.visibility = "visible";
+            bdrop.style.backgroundColor = "transparent";
+          } else {
+            colorsWrapper.style.display = "none";
+            bdrop.style.visibility = "hidden";
+          }
+        };
+    
+        const handleShowColors = () => {
+          if (colorsWrapper.style.bottom != "0px") {
+            colorsWrapper.style.bottom = "0px";
+            bdrop.style.visibility = "visible";
+          } else {
+            colorsWrapper.style.bottom = "-100%";
+            bdrop.style.visibility = "hidden";
+          }
+        };
+    
+        btnSeeMoreColor.onclick = () => {
+          if (!isMobile.matches) {
+            handleShow();
+          }
+    
+          if (isMobile.matches) {
+            handleShowColors();
+          }
+        };
+    
+        btnCloseColors.onclick = () => {
+          if (!isMobile.matches) {
+            handleShow();
+          }
+    
+          if (isMobile.matches) {
+            handleShowColors();
+          }
+        };
+      }
+    
+      function handleSeeMoreFont() {
+        let dropDownButtons = document.querySelectorAll(".dropbtn");
+        let fontdds = document.querySelectorAll(".dropdown-font-content");
+        let bdrop = document.querySelector("#back-drop");
+    
+        const handleShowFonts = (fontdd, button) => {
+          fontdds.forEach((fd) => {
+            if (fd != fontdd && fd.style.bottom == "0px") {
+              fd.style.bottom = "-100%";
+            }
+          });
+          if (fontdd.style.bottom != "0px") {
+            fontdd.style.bottom = "0px";
+            bdrop.style.visibility = "visible";
+          } else {
+            fontdd.style.bottom = "-100%";
+            bdrop.style.visibility = "hidden";
+          }
+        };
+    
+        const handleHideFonts = () => {
+          fontdds.forEach((fontdd) => {
+            if (fontdd.style.bottom == "0px") {
+              fontdd.style.bottom = "-100%";
+              bdrop.style.visibility = "hidden";
+            }
+          });
+        };
+    
+        dropDownButtons.forEach((dropDownButton, index) => {
+          const fontdd = fontdds[index];
+          dropDownButton.onclick = (e) => {
+            if (isMobile.matches) {
+              handleShowFonts(fontdd, dropDownButton);
+            }
+          };
+          fontdd.onclick = (e) => {
+            e.stopPropagation();
+          };
+        });
+    
+        document.addEventListener("click", (e) => {
+          if (
+            !e.target.closest("#dropdown-font-content") &&
+            !e.target.closest("#dropbtn")
+          ) {
+            handleHideFonts();
+          }
+        });
+    
+        let closeButtons = document.querySelectorAll(".btn-close-font");
+        closeButtons.forEach((closeButton) => {
+          closeButton.onclick = (e) => {
+            let fontdd = e.target.closest(".dropdown-font-content");
+            fontdd.style.bottom = "-100%";
+            bdrop.style.visibility = "hidden";
+          };
+        });
+      }
+      //Append New Btn
+    
+      function extraProductImages() {
+        let sidePanel = document.getElementById("side-panel-wrapper");
+        sidePanel.innerHTML = "";
+    
+        let selectedImageLabel = document.getElementsByClassName(
+          "selected-image-label"
+        )[0];
+    
+        products.map((obj) => {
+          let productImageContainer = document.createElement("div");
+          productImageContainer.classList = ["product-item"];
+          let productLink = document.createElement("a");
+          productLink.setAttribute("title", obj.label);
+          productLink.href = "#";
+    
+          let productImage = document.createElement("img");
+          imageUrl = `/_/shopimg/design/preview/${obj.product}.280.p1.png`;
+          productImage.src = imageUrl;
+          productImage.classList = ["product-image"];
+          productImage.setAttribute("product-id", obj.product);
+    
+          let productLabel = document.createElement("span");
+          productLabel.classList = ["img-label"];
+    
+          productLabel.textContent = obj.label;
+    
+          if (designId === obj.product) {
+            productImage.classList.toggle("active");
+          }
+    
+          productLink.appendChild(productImage);
+          productLink.appendChild(productLabel);
+    
+          productLink.onclick = (el) => {
+            const childImg = el.currentTarget.children[0];
+    
+            // formFields.innerHTML = ""
+            let productId = childImg.getAttribute("product-id");
+    
+            let selectedProductIndex = products.findIndex(
+              (product) => product.product === productId
+            );
+            if (selectedProductIndex !== -1) {
+              selectedProduct = products.splice(selectedProductIndex, 1)[0];
+            } else {
+              selectedProduct = products.find(
+                (product) => product.product === productId
+              );
+            }
+            products.unshift(selectedProduct);
+            productList();
+    
+            selectedImageLabel.textContent = obj.label;
+            updateTextFields(productId).then((t) => {
+              updateFields();
+            });
+            Array.from(
+              document.querySelectorAll(".side-panel-wrapper .product-item a")
+            ).forEach((el) => el.classList.remove("active"));
+            Array.from(
+              document.querySelectorAll(".product-container .product-item img")
+            ).forEach((el) =>
+              el.title == obj.label
+                ? el.classList.add("active")
+                : el.classList.remove("active")
+            );
+            el.currentTarget.classList.add("active");
+          };
+    
+          productImageContainer.appendChild(productLink);
+          sidePanel.appendChild(productImageContainer);
+        });
+      }
+    
+      async function productPlacement() {
+        let productContainer = document.createElement("div");
+        productContainer.classList = ["product-container"];
+    
+        let imageLabelWrapper = document.createElement("div");
+        imageLabelWrapper.classList = ["choose-image-wrapper"];
+        let imagesLabel = document.createElement("p");
+    
+        imagesLabel.classList = ["images-label"];
+    
+        let selectedImageLabel = document.createElement("p");
+        selectedImageLabel.classList = ["selected-image-label"];
+    
+        imagesLabel.textContent = "Kies een kleur";
+    
+        imageLabelWrapper.appendChild(imagesLabel);
+        imageLabelWrapper.appendChild(selectedImageLabel);
+    
+        const refNod = document.getElementById("design_title");
+    
+        const starbtn = document.createElement("div");
+        starbtn.innerHTML = `
+        <div class="navigation-bar-group navigation-bar-group-stars display-md-flex"><ul class="review_stars"><li><i class="shopicons shopicons-star"></i></li><li><i class="shopicons shopicons-star"></i></li><li><i class="shopicons shopicons-star"></i></li><li><i class="shopicons shopicons-star"></i></li><li><i class="shopicons shopicons-star"></i></li></ul> <div><a href=" https://www.trustedshops.de/bewertung/info_X32E40AD10AE1B0094E84A54DDA902904.html" target="_blank"><span class="StarCount">4.78</span><span>/5</span> - <span class="ReviewCount" id="f-light">6275</span>+ Bewertungen</a></div></div>
+      `;
+        const shoppingbtn = document.createElement("div");
+    
+        shoppingbtn.innerHTML = `
+      <div class="design_button_preview sticky_bar_mob"> <form id="choose_card_form" action="/add_to_basket"> <input type="hidden" id="coid" name="coid" value="hYroFimvzIoh">  <button type="submit" id="choose_preview" class="button button-success button-xlg" title="In winkelmandje" style="color: white;"><svg width="24" height="24" style="display:none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M11.92 9.5H13.92V6.5H16.92V4.5H13.92V1.5H11.92V4.5H8.92004V6.5H11.92V9.5ZM7.92004 18.5C6.82004 18.5 5.93004 19.4 5.93004 20.5C5.93004 21.6 6.82004 22.5 7.92004 22.5C9.02004 22.5 9.92004 21.6 9.92004 20.5C9.92004 19.4 9.02004 18.5 7.92004 18.5ZM17.92 18.5C16.82 18.5 15.93 19.4 15.93 20.5C15.93 21.6 16.82 22.5 17.92 22.5C19.02 22.5 19.92 21.6 19.92 20.5C19.92 19.4 19.02 18.5 17.92 18.5ZM9.02004 13.5H16.47C17.22 13.5 17.88 13.09 18.22 12.47L22.08 5.46L20.34 4.5L16.47 11.5H9.45004L5.19004 2.5H1.92004V4.5H3.92004L7.52004 12.09L6.17004 14.53C5.44004 15.87 6.40004 17.5 7.92004 17.5H19.92V15.5H7.92004L9.02004 13.5Z" fill="white"></path>
+                                          </svg> <span> In winkelmandje</span></button> </form> </div>
+      `;
+        const aboutList = document.getElementById("aboutlist-wrapper");
+    
+        refNod.parentNode.insertBefore(productContainer, refNod.nextSibling);
+        refNod.parentNode.insertBefore(imageLabelWrapper, refNod.nextSibling);
+        refNod.parentNode.insertBefore(aboutList, refNod.nextSibling);
+        refNod.parentNode.insertBefore(shoppingbtn, refNod.nextSibling);
+        refNod.parentNode.insertBefore(starbtn, refNod.nextSibling);
+        productList();
+      }
+    
+      async function productList() {
+        let productContainer =
+          document.getElementsByClassName("product-container")[0];
+        let selectedImageLabel = document.getElementsByClassName(
+          "selected-image-label"
+        )[0];
+        productContainer.innerHTML = "";
+    
+        let productContainerWidth = productContainer.offsetWidth;
+        // console.log(productContainerWidth)
+    
+        // product sizes
+        //     width: 54px;
+        // height: 54px;
+        let productPadding = 16;
+        let productWidth = 54 + productPadding;
+    
+        let maxNumProducts = Math.floor(productContainerWidth / productWidth) - 1;
+        // console.log(maxNumProducts)
+        // console.log(products.length)
+    
+        amountOfSlots =
+          products.length <= maxNumProducts + 1 ? products.length : maxNumProducts;
+    
+        products.slice(0, amountOfSlots).map((obj) => {
+          let productImageContainer = document.createElement("div");
+          productImageContainer.classList = ["product-item"];
+          // productImageContainer.style.padding = `${productPadding}px`;
+          let productLink = document.createElement("a");
+          productLink.href = "#";
+    
+          let productImage = document.createElement("img");
+          imageUrl = `/_/shopimg/design/preview/${obj.product}.280.p1.png`;
+          productImage.src = imageUrl;
+          productImage.classList = ["product-image"];
+          productImage.setAttribute("product-id", obj.product);
+          productImage.setAttribute("title", obj.label);
+    
+          if (designId === obj.product) {
+            productImage.classList.toggle("active");
+          }
+    
+          productLink.appendChild(productImage);
+    
+          // console.log(productLink)
+    
+          productLink.addEventListener(
+            "click",
+            function (el) {
+              // formFields.innerHTML = ""
+              let product = el.target.getAttribute("product-id");
+              selectedImageLabel.textContent = obj.label;
+              updateTextFields(product).then((t) => {
+                updateFields();
+              });
+              Array.from(
+                document.querySelectorAll(".side-panel-wrapper .product-item a")
+              ).forEach((el) =>
+                el.title == obj.label
+                  ? el.classList.add("active")
+                  : el.classList.remove("active")
+              );
+              Array.from(document.querySelectorAll(".product-image")).forEach(
+                (el) => el.classList.remove("active")
+              );
+              el.target.classList.add("active");
+              sessionStorage.setItem("selectedImage", obj.label);
+            },
+            false
+          );
+    
+          productImageContainer.appendChild(productLink);
+          productContainer.appendChild(productImageContainer);
+    
+          productLink.onmouseover = (el) => {
+            selectedImageLabel.textContent = el.target.title;
+          };
+    
+          productLink.onmouseout = () => {
+            selectedImageLabel.textContent =
+              sessionStorage.getItem("selectedImage");
+          };
+        });
+    
+        placeHolderCheck = maxNumProducts + 1 < products.length ? true : false;
+    
+        if (placeHolderCheck) {
+          let btnMoreImage = document.createElement("button");
+          btnMoreImage.classList = ["btn-more-image"];
+          btnMoreImage.setAttribute("id", "btn-more-image");
+          btnMoreImage.textContent = `+${products.length - maxNumProducts}`;
+          productContainer.appendChild(btnMoreImage);
+          extraProductImages();
+          handleSeeMoreImage();
+          //moveExtraImagesToBody()
+        }
+      }
+    
+      async function updateFields() {
+        const params = new URL(document.location).searchParams;
+        try {
+          let textInputs = document.querySelectorAll('input[name^="text"]');
+          for (let i = 0; i < textInputs.length; i++) {
+            let index = textInputs[i].getAttribute("index");
+            let fieldName = `text_${index}`;
+            let fieldValue = params.get(fieldName);
+            console.log(fieldName, fieldValue);
+            if (fieldValue != "null" && fieldValue != null) {
+              updateText(fieldValue, index);
+              textInputs[i].value = fieldValue;
+            }
+          }
+        } catch (error) {
+          throw Error("could not update text");
+        }
+    
+        try {
+          let fontButtons = document.querySelectorAll('button[id^="dropbtn"]');
+          for (let i = 0; i < fontButtons.length; i++) {
+            let index = fontButtons[i].getAttribute("index");
+            let fieldName = `font_${index}`;
+            let fieldValue = params.get(fieldName);
+            if (fieldValue != "null" && fieldValue != null) {
+              updateFont(fieldValue, index);
+              fontButtons[i].innerText = fieldValue;
+              fontButtons[i].style.fontFamily = fieldValue;
+            }
+          }
+        } catch (error) {
+          throw Error("could not update font");
+        }
+    
+        // try {
+        //   if (color != "null" && color != null) {
+        //     let colorPallets = document.getElementsByClassName(
+        //       "color-pallet-wrapper"
+        //     )[0];
+        //     let colorSelection = [...colorPallets.querySelectorAll("div")].filter(
+        //       (d) => d.getAttribute("color-code") === color
+        //     )[0];
+        //     if (colorSelection) {
+        //       let index = colorSelection.getAttribute("index");
+        //       updateColor(color, index);
+        //       colorSelection.classList.add("color-selected");
+        //       const hasColorCode = (colorcode, list) => {
+        //         return !!list.slice(0, 4).find((dict) => dict.color === colorcode);
+        //       };
+        //       console.log(hasColorCode(color, colors));
+        //       if (!hasColorCode(color, colors)) {
+        //         console.log("not in front list");
+        //         let colorDivs = colorPallets.querySelectorAll("div");
+        //         colorPallets.replaceChild(colorSelection, colorDivs[0]);
+        //       }
+        //     }
+        //   }
+        // } catch (error) {
+        //   throw Error("could not update color");
+        // }
+      }
+    
+      function changeParams(param, value) {
+        const url = new URL(window.location.href);
+        url.searchParams.set(param, value);
+        // url.searchParams.delete('param2');
+        window.history.replaceState(null, null, url); // or pushState
+      }
+    
+      async function addTextFields(baseDesign = designId, update = false) {
+        designData = await fetchDesign(baseDesign);
+        coid = designData[1];
+        design = designData[0];
+    
+        imgElements = design.designs[0].pages.p1.images;
+        imgElements.sort((a, b) =>
+          a.type === "rich_text" ? 1 : b.type === "rich_text" ? -1 : 0
+        );
+        const notUndefined = (anyValue) => typeof anyValue !== "undefined";
+        textElements = imgElements
+          .map((el, i) => {
+            if (el.type === "rich_text") {
+              return [i, el];
+            }
+          })
+          .filter(notUndefined);
+    
+        const params = new URL(document.location).searchParams;
+    
+        textObjects = textElements.map((el, i) => {
+          const originalIndex = el[0];
+          const textFieldName = `text_${originalIndex}`;
+          const fontFieldName = `font_${originalIndex}`;
+          const textValue =
+            params.get(textFieldName) !== null
+              ? params.get(textFieldName)
+              : el[1].text[0].lines[0].textSpans[0].text;
+          const fontValue =
+            params.get(fontFieldName) !== null
+              ? params.get(fontFieldName)
+              : el[1].text[0].lines[0].textSpans[0].font;
+          const colorValue = el[1].text[0].lines[0].textSpans[0].color;
+    
+          const obj = {
+            index: el[0],
+            text: textValue,
+            font: fontValue,
+            color: colorValue,
+          };
+    
+          return obj;
+        });
+    
+        textObjects.map((el, i) => {
+          // let inputText = name != "null" && name != null ? name : el.text
+          // let inputFont = font != null && font != "null" ? font : el.font
+          // let inputColor = color != null && color != "null" ? color : el.color
+          createEditElement(el.text, el.index, el.font, el.color, i);
+          // changeParams(param, value)
+        });
+    
+        buttonForm = document.querySelector("#choose_card_form");
+        buttonForm.setAttribute("action", "/add_to_basket");
+        buttonInput = document.querySelector("#coid");
+        buttonInput.setAttribute("value", coid);
+        button.title = "In winkelmandje";
+        button.style.backgroundColor = "#d67e60";
+        button.style.color = "white";
+        button.disabled = false;
+      }
+    
+      async function updateTextFields(baseDesign = designId, update = false) {
+        designData = await fetchDesign(baseDesign);
+        coid = designData[1];
+        design = designData[0];
+    
+        imgElements = design.designs[0].pages.p1.images;
+        imgElements.sort((a, b) =>
+          a.type === "rich_text" ? 1 : b.type === "rich_text" ? -1 : 0
+        );
+        const notUndefined = (anyValue) => typeof anyValue !== "undefined";
+        textElements = imgElements
+          .map((el, i) => {
+            if (el.type === "rich_text") {
+              return [i, el];
+            }
+          })
+          .filter(notUndefined);
+    
+        const params = new URL(document.location).searchParams;
+    
+        textObjects = textElements.map((el, i) => {
+          const originalIndex = el[0];
+          const textFieldName = `text_${originalIndex}`;
+          const fontFieldName = `font_${originalIndex}`;
+          const textValue =
+            params.get(textFieldName) !== null
+              ? params.get(textFieldName)
+              : el[1].text[0].lines[0].textSpans[0].text;
+          const fontValue =
+            params.get(fontFieldName) !== null
+              ? params.get(fontFieldName)
+              : el[1].text[0].lines[0].textSpans[0].font;
+          const colorValue = el[1].text[0].lines[0].textSpans[0].color;
+    
+          const obj = {
+            index: el[0],
+            text: textValue,
+            font: fontValue,
+            color: colorValue,
+          };
+    
+          return obj;
+        });
+    
+        // textObjects.map((el, i) => {
+        //   // let inputText = name != "null" && name != null ? name : el.text
+        //   // let inputFont = font != null && font != "null" ? font : el.font
+        //   // let inputColor = color != null && color != "null" ? color : el.color
+        //   createEditElement(el.text, el.index, el.font, el.color, i)
+        //   // changeParams(param, value)
+        // })
+    
+        textObjects.map((el) => {
+          // let inputText = name != "null" && name != null ? name : el.text
+          // let inputFont = font != null ? font : el.font
+          // let inputColor = color != null ? color : el.color
+          updateEditElement(el.text, el.index, el.font, el.color);
+        });
+    
+        buttonForm = document.querySelector("#choose_card_form");
+        buttonForm.setAttribute("action", "/add_to_basket");
+        buttonInput = document.querySelector("#coid");
+        buttonInput.setAttribute("value", coid);
+        button.title = "Bestel";
+        button.style.backgroundColor = "#d67e60";
+        button.style.color = "white";
+        button.disabled = false;
+    
+        frontPreview = document.getElementsByClassName("swiper-slide-content")[0];
+        frontThumb = frontPreview.querySelector(".thumbnail-flat-frontside");
+        frontThumb.parentElement.getElementsByTagName("source")[0].srcset =
+          "/flat_preview/" +
+          coid +
+          "/1/static_foil/480?timestamp=" +
+          new Date().getTime();
+    
+        inpuFieldCoid = document.getElementById("coid");
+        inpuFieldCoid.value = coid;
+      }
+    
+      function createEditElement(text, index, font, colorCode, textIndex) {
+        let t = document.createElement("input");
+        t.setAttribute("type", "text");
+        t.setAttribute("name", "text");
+        t.setAttribute("placeholder", text);
+        t.setAttribute("index", index);
+        t.setAttribute("id", "nameEnterInput");
+        t.classList = ["text-field-input"];
+    
+        t.addEventListener(
+          "input",
+          function (el) {
+            debounce(updateText(el.target.value, el.target.getAttribute("index")));
+            //updateText(el.target[0].value, el.target[0].getAttribute('index'))
+    
+            return false;
+          },
+          false
+        );
+    
+        // let color = colorPallet(index, colorCode)
+        let fontOptionList = fontList(index, font);
+    
+        let titleIn = document.createElement("p");
+        let spanInTitle = document.createElement("span");
+        let textIndexName = textIndex + 1;
+    
+        titleIn.classList = ["input-title-text"];
+        titleIn.textContent = `Tekst ${textIndexName}`;
+        spanInTitle.textContent = "";
+    
+        titleIn.appendChild(spanInTitle);
+    
+        let inputWrapper = document.createElement("div");
+        inputWrapper.classList = ["form-input-group"];
+    
+        inputWrapper.appendChild(titleIn);
+        inputWrapper.appendChild(t);
+    
+        formFields.appendChild(inputWrapper);
+        formFields.appendChild(fontOptionList);
+        // formFields.appendChild(color)
+        //1626
+        handleSeeMoreFont();
+    
+        let textParamName = `text_${index}`;
+        changeParams(textParamName, text);
+    
+        let fontParamName = `font_${index}`;
+        changeParams(fontParamName, font);
+      }
+    
+      function getLabelByColor(color) {
+        const result = colors.find((item) => item.color === color);
+        return result ? result.label : "";
+      }
+    
+      function updateEditElement(text, index, font, colorCode) {
+        let t = Array.from(
+          document.getElementsByClassName("text-field-input")
+        ).find((el) => el.getAttribute("index") === index);
+        t.setAttribute("placeholder", text);
+        t.setAttribute("index", index);
+    
+        let dropdownField = document.getElementById("dropdown-font-content");
+        let fontSelection = [...dropdownField.querySelectorAll("a")].filter((a) =>
+          a.textContent.includes(font)
+        )[0];
+        if (fontSelection) {
+          let index = fontSelection.getAttribute("index");
+          let dropDownButton = document.getElementById("dropbtn");
+          dropDownButton.innerText = font;
+          dropDownButton.style.fontFamily = font;
+        }
+    
+        // colorCode = colorCode.replace('#','');
+        // Array.from(
+        //         document.querySelectorAll(".color-popup-wrapper .color-item")
+        //       ).forEach((el, idx) => {
+    
+        //       if (el.getAttribute("color-code") !== colorCode) {
+        //           el.classList.remove("color-selected")
+        //           Array.from(
+        //             document.querySelectorAll(".color-pallet-wrapper .color-item")
+        //           ).forEach((el, idx) => {
+        //             if (el.getAttribute("color-code") !== colorCode) {
+        //               el.classList.remove("color-selected")
+        //             }
+        //           })
+        //         } else {
+    
+        //           el.classList.add("color-selected")
+        //         }
+        //       })
+    
+        //   const colorPalletWrapper = document.getElementById("color-pallet-wrapper");
+        //   const colorItems = colorPalletWrapper.querySelectorAll(".color-item");
+        //   const colorNumber = isMobile.matches ? 6 : 4
+        //   const colorTitle = getLabelByColor(colorCode)
+        //   console.log(colorTitle)
+        //   // Check if the selected color is already in the top 4 color items
+        //   let colorAlreadyInList = false;
+        //   for (let i = 0; i < colorNumber; i++) {
+        //     if (colorItems[i].getAttribute("color-code") === colorCode) {
+        //       colorItems[i].classList.add("color-selected");
+        //       colorAlreadyInList = true;
+        //       break;
+        //     }
+        //   }
+    
+        //   // If the selected color is not in the top , replace the first color item with the selected color
+        //   if (!colorAlreadyInList) {
+        //     colorItems[0].title = colorTitle;
+        //     colorItems[0].setAttribute("color-code", colorCode);
+        //     colorItems[0].style.background = `#${colorCode}`;
+        //     colorItems[0].classList.add("color-selected");
+        //   }
+    
+        handleSeeMoreFont();
+      }
+    
+      function fontCss() {
+        let fontCss = document.createElement("style");
+        fontCss.type = "text/css";
+        fonts.map((f) => {
+          fontStyle = `@font-face {
+                                      font-family: '${f.font}';
+                                      src: url("/imgbase/fonts/${f.url}") format("${f.format}");
+                                      }`;
+          fontCss.textContent += fontStyle;
+        });
+    
+        return fontCss;
+      }
+    
+      function fontList(index, font) {
+        const fontDropdown = document.createElement("div");
+        fontDropdown.classList = ["dropdown-font"];
+        fontDropdown.setAttribute("id", "dropdown-font");
+    
+        const btnContentWrapper = document.createElement("div");
+        btnContentWrapper.classList = ["btn-content-wrapper"];
+    
+        const letterTypeLabel = document.createElement("label");
+        letterTypeLabel.classList = ["letterType"];
+        letterTypeLabel.textContent = "Lettertype";
+    
+        const fontSelection = document.createElement("button");
+        fontSelection.classList = ["dropbtn"];
+        fontSelection.setAttribute("id", "dropbtn");
+        fontSelection.setAttribute("index", index);
+    
+        fontSelection.innerText = font;
+        fontSelection.style.fontFamily = font;
+    
+        const fontOptionList = document.createElement("div");
+        fontOptionList.classList = ["dropdown-font-content"];
+        fontOptionList.setAttribute("id", "dropdown-font-content");
+    
+        // font header
+        let fontHeader = document.createElement("div");
+        fontHeader.classList = ["font-head"];
+        fontHeader.setAttribute("id", "font-head");
+    
+        let closeFontWrapper = document.createElement("div");
+        closeFontWrapper.classList = ["close-font-wrapper"];
+        closeFontWrapper.setAttribute("id", "close-font-wrapper");
+    
+        let btnClose = document.createElement("button");
+        btnClose.classList = ["btn-close-font"];
+        btnClose.setAttribute("id", "btn-close-font");
+        btnClose.innerHTML = `<svg
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M11.8333 1.34163L10.6583 0.166626L5.99996 4.82496L1.34163 0.166626L0.166626 1.34163L4.82496 5.99996L0.166626 10.6583L1.34163 11.8333L5.99996 7.17496L10.6583 11.8333L11.8333 10.6583L7.17496 5.99996L11.8333 1.34163Z"
+                                          fill="#7A7A7A"
+                                        />
+                                      </svg>`;
+    
+        let chooseFont = document.createElement("p");
+        chooseFont.classList = ["choose-font"];
+        chooseFont.setAttribute("id", "choose-font");
+        chooseFont.textContent = "Kies een lettertype";
+    
+        closeFontWrapper.appendChild(btnClose);
+    
+        fontHeader.appendChild(chooseFont);
+        fontHeader.appendChild(closeFontWrapper);
+    
+        fontOptionList.appendChild(fontHeader);
+    
+        let listWrapper = document.createElement("div");
+        listWrapper.classList = ["font-list"];
+        listWrapper.setAttribute("id", "font-list");
+    
+        fonts.map((f) => {
+          fontOption = document.createElement("a");
+          fontOption.href = "#";
+          fontOption.classList = ["dropdown-font-content-item"];
+          fontOption.innerText = f.font;
+          fontOption.style.fontFamily = f.font;
+          fontOption.setAttribute("index", index);
+    
+          fontOption.addEventListener(
+            "click",
+            function (el) {
+              updateFont(el.target.innerText, el.target.getAttribute("index"));
+              fontSelection.innerText = el.target.innerText;
+              fontSelection.style.fontFamily = el.target.innerText;
+    
+              Array.from(
+                this.parentNode.querySelectorAll(".dropdown-font-content-item")
+              ).forEach((el) => {
+                if (el.classList.contains("active")) {
+                  el.classList.remove("active");
+                }
+              });
+    
+              el.currentTarget.classList.add("active");
+            },
+            false
+          );
+    
+          listWrapper.appendChild(fontOption);
+        });
+    
+        fontOptionList.appendChild(listWrapper);
+    
+        btnContentWrapper.appendChild(fontSelection);
+        btnContentWrapper.appendChild(fontOptionList);
+    
+        fontDropdown.appendChild(letterTypeLabel);
+        fontDropdown.appendChild(btnContentWrapper);
+    
+        fontDropdown.addEventListener("click", (e) => {
+          if (e.target.classList.contains("dropbtn")) {
+            let bdrop = document.getElementById("back-drop");
+            let dropdowns = document.querySelectorAll(".dropdown-font");
+    
+            // Remove the z-index of all dropdowns with the same class
+            dropdowns.forEach((dropdown) => {
+              dropdown.style.zIndex = "";
+            });
+    
+            if (fontOptionList.classList.contains("active")) {
+              bdrop.style.visibility = "hidden";
+              if (!isMobile.matches) {
+                fontOptionList.classList.toggle("active");
+              }
+            } else {
+              fontOptionList.classList.add("active");
+              bdrop.style.visibility = "visible";
+              if (!isMobile.matches) {
+                fontDropdown.style.zIndex = "3000";
+                bdrop.style.backgroundColor = "transparent";
+              }
+            }
+    
+            if (isMobile.matches) {
+              fontOptionList.classList.toggle("active");
+            }
+    
+            document.addEventListener("click", (e) => {
+              if (!fontDropdown.contains(e.target)) {
+                fontOptionList.classList.remove("active");
+              }
+            });
+          }
+        });
+    
+        return fontDropdown;
+      }
+    
+      function moveToFront(colorsList, colorCode, minRange) {
+        let index = -1;
+        for (let i = 0; i < colorsList.length; i++) {
+          if (colorsList[i].color === colorCode) {
+            index = i;
+            break;
+          }
+        }
+    
+        if (index > -1 && index > minRange) {
+          const color = colorsList[index];
+          colorsList.splice(index, 1);
+          colorsList.unshift(color);
+        }
+        return colorsList;
+      }
+    
+      function colorPallet(index, colorCode) {
+        let btnMoreColor = document.createElement("button");
+        btnMoreColor.classList = ["btn-more-color"];
+        btnMoreColor.setAttribute("id", "btn-more-color");
+        btnMoreColor.textContent = `+${
+          colors.length - colors.slice(0, isMobile.matches ? 3 : 4).length
+        }`;
+    
+        // color popup wrapper
+        let cpw = document.createElement("div");
+        cpw.classList = ["color-popup-wrapper"];
+        cpw.setAttribute("id", "color-popup-wrapper");
+    
+        let cph = document.createElement("div");
+        cph.classList = ["color-popup-head"];
+        cph.setAttribute("id", "color-popup-head");
+    
+        let closeWrapper = document.createElement("div");
+        closeWrapper.classList = ["close-wrapper"];
+        closeWrapper.setAttribute("id", "close-wrapper");
+    
+        let btnClose = document.createElement("button");
+        btnClose.classList = ["close-color-panel"];
+        btnClose.setAttribute("id", "close-color-panel");
+        btnClose.innerHTML = `<svg
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M11.8333 1.34163L10.6583 0.166626L5.99996 4.82496L1.34163 0.166626L0.166626 1.34163L4.82496 5.99996L0.166626 10.6583L1.34163 11.8333L5.99996 7.17496L10.6583 11.8333L11.8333 10.6583L7.17496 5.99996L11.8333 1.34163Z"
+                                          fill="#7A7A7A"
+                                        />
+                                      </svg>`;
+    
+        closeWrapper.appendChild(btnClose);
+    
+        let clw = document.createElement("div");
+        clw.classList = ["color-label-wrapper"];
+        clw.setAttribute("id", "color-label-wrapper");
+    
+        let chooseColor = document.createElement("p");
+        chooseColor.classList = ["choose-color"];
+        chooseColor.setAttribute("id", "choose-color");
+        chooseColor.textContent = "Kies een formaat";
+    
+        let selectedColor = document.createElement("p");
+        selectedColor.classList = ["selected-color"];
+        selectedColor.setAttribute("id", "selected-color");
+    
+        clw.appendChild(chooseColor);
+        clw.appendChild(selectedColor);
+    
+        cph.appendChild(closeWrapper);
+        cph.appendChild(clw);
+    
+        let colorsPanel = document.createElement("div");
+        colorsPanel.classList = ["colors-panel"];
+        colorsPanel.setAttribute("id", "colors-panel");
+    
+        cpw.appendChild(cph);
+        cpw.appendChild(colorsPanel);
+    
+        // palette
+        let pallet = document.createElement("div");
+        pallet.classList = ["color-pallet"];
+        pallet.setAttribute("id", "color-pallet");
+    
+        let palletWrapper = document.createElement("div");
+        palletWrapper.classList = ["color-pallet-wrapper"];
+        palletWrapper.setAttribute("id", "color-pallet-wrapper");
+    
+        let palletTextLabel = document.createElement("div");
+        palletTextLabel.classList = ["color-pallet-text-label"];
+        palletTextLabel.setAttribute("id", "color-pallet-text-label");
+        palletTextLabel.textContent = "Tekstkleur";
+    
+        let palletTextLabelContent = document.createElement("span");
+        palletTextLabelContent.classList = ["color-pallet-text-label-content"];
+        palletTextLabelContent.setAttribute(
+          "id",
+          "color-pallet-text-label-content"
+        );
+        palletTextLabelContent.style.color = `#666666`;
+        palletTextLabelContent.textContent = `Kies een kleur`;
+    
+        pallet.appendChild(palletTextLabel);
+        pallet.appendChild(palletWrapper);
+        palletTextLabel.appendChild(palletTextLabelContent);
+    
+        const cleanColorCode = colorCode.replace("#", "").toLowerCase();
+    
+        let newColorsList = [...colors];
+    
+        newColorsList = isMobile.matches
+          ? moveToFront(newColorsList, cleanColorCode, 6)
+          : moveToFront(newColorsList, cleanColorCode, 4);
+    
+        newColorsList.slice(0, isMobile.matches ? 6 : 4).map((el) => {
+          let colorItem = document.createElement("div");
+          let styling = `background: #${el.color};`;
+          colorItem.classList = ["color-item"];
+          colorItem.style = styling;
+          colorItem.title = el.label;
+          colorItem.setAttribute("index", index);
+          colorItem.setAttribute("color-code", el.color);
+    
+          if (el.color.replace("#", "").toLowerCase() === cleanColorCode) {
+            colorItem.classList.add("color-selected");
+          }
+    
+          colorItem.addEventListener(
+            "click",
+            function (el) {
+              let colorCode = el.target.getAttribute("color-code");
+              let colorTitle = el.target.getAttribute("title");
+    
+              updateColor(colorCode, el.target.getAttribute("index"));
+              Array.from(document.querySelectorAll(".color-item")).forEach((el) => {
+                if (el.getAttribute("title") !== colorTitle) {
+                  el.classList.remove("color-selected");
+                } else {
+                  el.classList.add("color-selected");
+                }
+              });
+              el.target.classList.add("color-selected");
+    
+              //change color text of label content
+              selectedColor.textContent = colorTitle;
+              palletTextLabelContent.textContent = colorTitle;
+              //btnMoreColor.textContent = `+${ colors.length+1}`
+            },
+            false
+          );
+          palletWrapper.appendChild(colorItem);
+        });
+        palletWrapper.appendChild(btnMoreColor);
+    
+        setTimeout(() => {
+          extraColors(
+            index,
+            colorCode,
+            btnMoreColor,
+            palletTextLabelContent,
+            cpw,
+            selectedColor,
+            colorsPanel
+          );
+        }, 1500);
+    
+        return pallet;
+      }
+    
+      function extraColors(
+        index,
+        colorCode,
+        btnMoreColor,
+        palletTextLabelContent,
+        cpw,
+        selectedColor,
+        colorsPanel
+      ) {
+        let firstColor = document.getElementsByClassName("color-item")[0];
+    
+        colors.map((el) => {
+          let colorItem = document.createElement("div");
+          let styling = `background: #${el.color};`;
+          colorItem.classList = ["color-item"];
+          colorItem.style = styling;
+          colorItem.title = el.label;
+          colorItem.setAttribute("index", index);
+          colorItem.setAttribute("color-code", el.color);
+    
+          if (
+            el.color.replace("#", "").toLowerCase() ===
+            colorCode.replace("#", "").toLowerCase()
+          ) {
+            colorItem.classList.add("color-selected");
+          }
+    
+          colorItem.addEventListener(
+            "click",
+            function (el) {
+              let colorCode = el.target.getAttribute("color-code");
+              let colorTitle = el.target.getAttribute("title");
+    
+              updateColor(colorCode, el.target.getAttribute("index"));
+              Array.from(
+                document.querySelectorAll(".color-popup-wrapper .color-item")
+              ).forEach((el, idx) => {
+                if (el.getAttribute("title") !== colorTitle) {
+                  el.classList.remove("color-selected");
+                  Array.from(
+                    document.querySelectorAll(".color-pallet-wrapper .color-item")
+                  ).forEach((el, idx) => {
+                    if (el.getAttribute("title") !== colorTitle) {
+                      el.classList.remove("color-selected");
+                    }
+                  });
+                } else {
+                  const colorNumber = isMobile.matches ? 5 : 3;
+                  el.classList.add("color-selected");
+                  if (idx > colorNumber || idx == 0) {
+                    firstColor.setAttribute("title", colorTitle);
+                    firstColor.setAttribute("color-code", colorCode);
+                    firstColor.style = `background: #${colorCode};`;
+                    firstColor.classList.add("color-selected");
+                  } else if (idx <= colorNumber && idx !== 0) {
+                    let cl = Array.from(
+                      document.querySelectorAll(".color-pallet-wrapper .color-item")
+                    )[idx];
+    
+                    cl.setAttribute("title", colorTitle);
+                    cl.setAttribute("color-code", colorCode);
+                    cl.style = `background: #${colorCode};`;
+                    cl.classList.add("color-selected");
+                  }
+                }
+              });
+              el.target.classList.add("color-selected");
+    
+              sessionStorage.setItem("selectedColor", colorTitle);
+    
+              palletTextLabelContent.textContent = colorTitle;
+              selectedColor.textContent = colorTitle;
+            },
+            false
+          );
+    
+          colorItem.onmouseover = (el) => {
+            selectedColor.textContent = el.target.title;
+          };
+    
+          colorItem.onmouseout = () => {
+            selectedColor.textContent = sessionStorage.getItem("selectedColor");
+          };
+    
+          colorsPanel.appendChild(colorItem);
+        });
+    
+        btnMoreColor.appendChild(cpw);
+        handleSeeMoreColor();
+      }
+    
+      async function fetchDesign(d) {
+        let chooseCard = await fetch("/choose_card/" + d);
+        let urlDesign = await chooseCard.url;
+        let coidUrl = new URL(urlDesign);
+        let coid = coidUrl.searchParams.get("coid");
+        let response = await fetch("/api/design?coid=" + coid);
+        let fullDesignJson = await response.json();
+        // let designPages = await fullDesignJson.designs[0].pages;
+        return [fullDesignJson, coid];
+      }
+    
+      async function flatPreviewGenerator(coId) {
+        let flatPreviewUrl = `/flat_preview/${coId}/1/static_foil/480`;
+        let getFlatPreview = await fetch(flatPreviewUrl, {
+          method: "GET",
+          credentials: "same-origin",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }).then((response) => {
+          if (!response.ok) {
+            throw Error("no valid coid");
+          }
+          let getImageBlob = response.blob().then(function (myBlob) {
+            let objectURL = URL.createObjectURL(myBlob);
+            return objectURL;
+          });
+          return getImageBlob;
+        });
+        return getFlatPreview;
+      }
+    
+      async function updateText(text, index) {
+        let len = text.length;
+        let prevLen = imgElements[index].text[0].lines[0].textSpans[0].text.length;
+        // console.log(imgElements[index])
+        let s = imgElements[index].text[0].lines[0].textSpans[0].fontSize;
+        let f = imgElements[index].text[0].lines[0].textSpans[0].font;
+        let lh = imgElements[index].text[0].lineHeight;
+    
+        let sizeW = imgElements[index].w;
+        let sizeH = imgElements[index].h;
+        // console.log(f, " ", s, " sw: ", sizeW, " sw: ", sizeH)
+    
+        const params = new URL(document.location).searchParams;
+        const fontFieldName = `font_${index}`;
+        const fontValue = params.get(fontFieldName);
+    
+        let c = document.createElement("canvas");
+        let ctx = c.getContext("2d");
+        ctx.font = `${s}px ${fontValue}`;
+        let txt = text;
+        let metrics = ctx.measureText(txt);
+        let textWidth = metrics.width;
+        let textHeight =
+          metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
+    
+        // console.log("ctx. wxh", textWidth, "x", textHeight)
+    
+        let maxContextSizeW = sizeW * 2.4;
+        let maxContextSizeH = sizeH * 2.4;
+    
+        if (len > prevLen) {
+          while (textWidth >= maxContextSizeW) {
+            // console.log("begin decrease")
+            s = s * 0.98;
+            // console.log(s)
+            ctx.font = `${s}px ${fontValue}`;
+            txt = text;
+            textWidth = ctx.measureText(txt).width;
+            lh = 2.5;
+          }
+    
+          // console.log("end / no decrease")
+        } else {
+          while (textHeight < maxContextSizeH && !(textWidth > maxContextSizeW)) {
+            // console.log("begin to increase")
+            s = s * 1.02;
+            // console.log(s)
+            ctx.font = `${s}px ${fontValue}`;
+            txt = text;
+            metrics = ctx.measureText(txt);
+            textHeight =
+              metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
+            textWidth = metrics.width;
+            lh = 1;
+          }
+          // console.log("make smaller")
+        }
+    
+        // console.log("width ", textWidth)
+        // console.log("lineHeight ", lh)
+        imgElements[index].text[0].lineHeight = lh;
+        imgElements[index].text[0].lines[0].textSpans[0].text = text;
+        imgElements[index].text[0].lines[0].textSpans[0].fontSize = s;
+    
+        updateDesign();
+        let paramName = `text_${index}`;
+        changeParams(paramName, text);
+      }
+    
+      async function updateColor(color, index) {
+        imgElements[index].text[0].lines[0].textSpans[0].color = "#" + color;
+        updateDesign();
+        changeParams("color", color);
+      }
+    
+      async function updateFont(font, index) {
+        let text = imgElements[index].text[0].lines[0].textSpans[0].text;
+        let len = text.length;
+        let prevLen = imgElements[index].text[0].lines[0].textSpans[0].text.length;
+        // console.log(imgElements[index])
+        let s = imgElements[index].text[0].lines[0].textSpans[0].fontSize;
+        let f = imgElements[index].text[0].lines[0].textSpans[0].font;
+        let lh = imgElements[index].text[0].lineHeight;
+    
+        let sizeW = imgElements[index].w;
+        let sizeH = imgElements[index].h;
+        // console.log(f, " ", s, " sw: ", sizeW, " sw: ", sizeH)
+    
+        let c = document.createElement("canvas");
+        let ctx = c.getContext("2d");
+        ctx.font = `${s}px ${font}`;
+        let txt = text;
+        let metrics = ctx.measureText(txt);
+        let textWidth = metrics.width;
+        let textHeight =
+          metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
+    
+        // console.log("ctx. wxh", textWidth, "x", textHeight)
+    
+        let maxContextSizeW = sizeW * 2.4;
+        let maxContextSizeH = sizeH * 2.5;
+    
+        while (textWidth >= maxContextSizeW) {
+          // console.log("begin decrease")
+          s = s * 0.98;
+          // console.log(s)
+          ctx.font = `${s}px ${font}`;
+          txt = text;
+          textWidth = ctx.measureText(txt).width;
+          lh = 2.5;
+        }
+    
+        // console.log("end / no decrease")
+    
+        while (textHeight < maxContextSizeH && !(textWidth > maxContextSizeW)) {
+          // console.log("begin to increase")
+          s = s * 1.02;
+          // console.log(s)
+          ctx.font = `${s}px ${font}`;
+          txt = text;
+          metrics = ctx.measureText(txt);
+          textHeight =
+            metrics.fontBoundingBoxAscent + metrics.fontBoundingBoxDescent;
+          textWidth = metrics.width;
+          lh = 1;
+        }
+    
+        imgElements[index].text[0].lines[0].textSpans[0].font = font;
+        imgElements[index].text[0].lines[0].textSpans[0].fontSize = s;
+    
+        updateDesign();
+        let paramFont = `font_${index}`;
+        changeParams(paramFont, font);
+      }
+    
+      async function updateDesign() {
+        design.designs[0].pages.design_data["fold"] = "none";
+        design.designs[0].pages.design_data.labels["userSpreads"] = [];
+        design.designs[0].pages.design_data.labels["card"] = [];
+        delete design.designs[0].pages.design_data.material["name"];
+        delete design.designs[0].pages.p1.foil_enabled;
+    
+        design.designs[0].pages.p1.images.sort((a, b) => a.order - b.order);
+    
+        let updateDesign = await fetch("/api/design?coid=" + coid, {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(design),
+        });
+    
+        design = await updateDesign.json();
+        //console.log(design)
+        imgElements = design.designs[0].pages.p1.images;
+        frontPreview = document.getElementsByClassName("swiper-slide-content")[0];
+        frontThumb = frontPreview.querySelector(".thumbnail-flat-frontside");
+        frontThumb.parentElement.getElementsByTagName("source")[0].srcset =
+          "/flat_preview/" +
+          coid +
+          "/1/static_foil/480?timestamp=" +
+          new Date().getTime();
+    
+        inpuFieldCoid = document.getElementById("coid");
+        inpuFieldCoid.value = coid;
+      }
+    
+      function debounce(func, delay = 150) {
+        let timerId;
+        return (...args) => {
+          clearTimeout(timerId);
+          timerId = setTimeout(() => {
+            func.apply(this, args);
+          }, delay);
+        };
+      }
+    
+      //add mobile scroll button
+      let prewArea = document.querySelector("#card-preview__container");
+      let scrollMobileElement = document.createElement("a");
+    
+      scrollMobileElement.setAttribute("href", "#nameEnterInput");
+      scrollMobileElement.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M11.7156 7.51667L12.4823 8.28333L4.9323 15.8333H4.16563V15.0667L11.7156 7.51667ZM14.7156 2.5C14.5073 2.5 14.2906 2.58333 14.1323 2.74167L12.6073 4.26667L15.7323 7.39167L17.2573 5.86667C17.5823 5.54167 17.5823 5.01667 17.2573 4.69167L15.3073 2.74167C15.1406 2.575 14.9323 2.5 14.7156 2.5ZM11.7156 5.15833L2.49896 14.375V17.5H5.62396L14.8406 8.28333L11.7156 5.15833Z" fill="#D67E60"/>
+                                          </svg> <span> Tekst aanpassen</span>`;
+      scrollMobileElement.classList = ["scrol-navigation-button"];
+      prewArea.appendChild(scrollMobileElement);
+      scrollMobileElement.addEventListener("click", function (e) {
+        e.preventDefault();
+        const yOffset = -95;
+        const element = document.getElementById("nameEnterInput");
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      });
+      setTimeout(() => {
+        const starsGroups = document.querySelectorAll(
+          ".navigation-bar-group.navigation-bar-group-stars"
+        )[1];
+        starsGroups.style.setProperty("display", "none", "important");
+        starsGroups.classList.remove("display-md-flex");
+      }, 1000);
+    </script>

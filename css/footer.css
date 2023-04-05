@@ -1,18 +1,18 @@
 .footer{
     height: auto;
-    padding: 6% 10.42% 10.42%;
+    padding: 16.42% 10.42% 6.42%;
     display: flex;
     justify-content: center;
 }
 .footer-content{
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 50px;
     align-items: center;
 }
 .with-logo{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     align-items: center;
 }
