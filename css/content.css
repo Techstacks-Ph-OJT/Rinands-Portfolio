@@ -45,6 +45,9 @@
     padding: 0 10.42%;
     position: relative;
     flex-wrap: wrap;
+    background-image: url('../img/bg-main.png');
+    background-repeat: no-repeat;
+    background-position: top;
 }
 .left-container{
     display: flex; 
@@ -64,6 +67,9 @@
     font-size: var(--namesize);
     color: var(--color1);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 .line-container{
     width: 20%; 
@@ -107,8 +113,7 @@
     display: none;
 }
 .right-container{
-    flex: 1; 
-    height: 100%; 
+    flex: 1;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -120,6 +125,7 @@
     font-family: var(--secondaryfont);
     font-size: var(--textsize);
     color: var(--color3);
+    opacity: 0;
 }
 .title-container-orig{
     font-size: var(--titlesize);
@@ -134,7 +140,18 @@
     white-space: pre-line;
     position: relative;
     height: auto;
+    opacity: 0;
 }
+
+.title-container2{
+    font-size: var(--titlesize);
+    line-height: 38px;
+    color: var(--color1);
+    white-space: pre-line;
+    position: relative;
+    height: auto;
+}
+
 .titles-container{
     font-size: var(--titlesize2);
     line-height: 38px;
@@ -143,9 +160,10 @@
 }
 .para-container{
     font-family: var(--secondaryfont);
-    line-height: 30px;
+    line-height: 40px;
     color: var(--color3);
     font-size: var(--parasize);
+    opacity: 0;
 }
 .paras-container{
     font-family: var(--secondaryfont);
@@ -159,6 +177,10 @@
     line-height: 30px;
     color: var(--color3);
     font-size: var(--footersize);
+}
+
+.date-para{
+    opacity: 1;
 }
 .button-container{
     gap: 15px; 
@@ -174,6 +196,8 @@
     font-size: var(--buttonsize);
     text-decoration: underline;
     cursor: pointer;
+    opacity: 0;
+    margin-bottom: 2px;
 }
 .hidden-container{
     display: flex;
@@ -231,15 +255,16 @@
 }
 .nw-container{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     height: fit-content;
     gap: 20px;
+    opacity: 0;
 }
 .number-style{
     font-size: clamp(2.8125rem, 2.4013rem + 2.193vw, 4.375rem);
     color: var(--color2);
     display: inline-block;
-    line-height: 80%;
+    line-height: 100%;
 }
 .word-style{
     color: var(--color1);
@@ -439,6 +464,7 @@
 }
 .dev-img{
     width: 100%;
+    opacity: 0;
 }
 .proj-img{
     width: 100%;
@@ -495,11 +521,13 @@
 .blog-helping-container{
     gap: 30px; 
     display: flex;
+    opacity: 0;
 }
 .semi-title{
     font-size: var(--semisize);
     line-height: 25px;
     color: var(--color3);
+    opacity: 0;
 }
 .lower-container{
     display: flex;
@@ -512,6 +540,7 @@
 }
 .testimonial-img-class{
    width: 100%;
+   opacity: 0;
 }
 .hidden-testimonial-class{
     display: flex;
@@ -543,14 +572,17 @@
 .quote-img{
     width: 50px;
     filter: invert(0.7);
+    opacity: 0;
 }
 .person-name{
     display: flex;
     flex-direction: column;
+    opacity: 0;
 }
 .slidebar{
     display: flex;
     gap: 20px;
+    opacity: 0;
 }
 .rectangle-muna{
     width: 60px;
@@ -605,12 +637,46 @@
 .add-orange{
     color: var(--color4);
 }
+.add-yellow{
+    color: var(--color2);
+}
 .none{
     display: none;
 }
 .gap{
     gap: 15px;
 }
+.line-height{
+    line-height: 38px;
+}
+.opacity{
+    opacity: 1;
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 50px;
+}
+.original-flex{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0; 
+    margin-top: 10px;
+}
+.line-height100{
+    line-height: 100%;
+}
+.align-itemc{
+    align-items: center;
+}
+.line-height95{
+    line-height: 95%;
+}
+
 
 /* hover */
 
@@ -739,6 +805,7 @@
     .first-main{
         padding: 55px 10.42% 70px;
         gap: 20px;
+        background-image: none;
     }
     .arrows{
         display: block!important;
@@ -778,8 +845,11 @@
     }
 }
 @media (max-width: 425px) {
-    .fourth-main, .left-third-container, .right-third-container{
+    .fourth-main, .left-third-container{
         gap: 60px;
+    }
+    .right-third-container{
+        gap: 50px;
     }
     .inside2-first-container{
         margin-top: 50px;
@@ -847,10 +917,11 @@
     height: inherit;
     background: var(--color4);
     position: absolute;
-    animation: mainBlock 1.4s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: mainBlock 1.1s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
     z-index: 1000;
 }
+
 .line-container{
     animation: lineBlock .8s cubic-bezier(.74, .06, .4, .92) forwards;
     width: 20%; 
@@ -861,16 +932,29 @@
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: .8s;
+    animation-delay: .6s;
     opacity: 0;
     display: flex;
     align-items: baseline;
     position: relative;
-    line-height: 95%;
+    /* line-height: 95%; */
 }
+
+.name-main-number{
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: .6s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* line-height: 95%; */
+}
+
 .name-main2{
     animation: secFadeIn 2s forwards;
-    animation-delay: .8s;
+    animation-delay: .6s;
     opacity: 0;
     display: inline-block;
     line-height: 90%;
@@ -879,7 +963,7 @@
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: .8s;
+    animation-delay: .6s;
     opacity: 0;
     position: relative;
 }
@@ -887,7 +971,7 @@
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: .8s;
+    animation-delay: .6s;
     opacity: 0;
     position: relative;
 }
@@ -896,7 +980,7 @@
     height: inherit;
     background: var(--color7);
     position: absolute;
-    animation: mainBlock 1.4s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: mainBlock 1.1s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
     z-index: 100;
 }
@@ -1003,7 +1087,7 @@
     bottom: 0;
     left: 0;
     opacity: 0;
-    animation: slideUp 1.5s ease-in-out forwards, fadeIn 0.5s ease-out forwards;
+    animation: slideUp 1s ease-in-out forwards, fadeIn 0.5s ease-out forwards;
 }
 @keyframes slideUp {
     from {
@@ -1025,21 +1109,51 @@
 .blockbox-helping-container{
     display: inline-block; 
     max-width: 100%; 
-    height: 100%; 
+    width: fit-content;
+    height: 100%;
+    position: relative;
+}
+
+.blockbox-helping-container-another{
+    display: inline-block; 
+    max-width: 100%; 
+    width: fit-content;
+    height: 75%;
+    position: relative;
+}
+
+.blockbox-helping-container-another2{
+    display: flex;
+    align-items: center;
+    max-width: 100%; 
+    width: fit-content;
+    height: 60%;
+    position: relative;
+}
+
+.blockbox-helping-container-another3{
+    display: flex;
+    align-items: center;
+    max-width: 100%; 
+    width: fit-content;
+    height: 20%;
     position: relative;
 }
 
 .blockbox-helping-containerimg{
-    max-width: 100%; 
+    max-width: 100%;
+    width: fit-content; 
     height: 100%; 
     position: relative;
 }
 
 .blockbox-helping-container2{
     display: inline-block; 
-    max-width: 100%; 
+    max-width: 100%;
+    width: fit-content;
     position: relative; 
     overflow: hidden;
+    height: 100%;
 }
 
 .scroll-animation-slide-up, .scroll-animation-slide-up2,
@@ -1051,3 +1165,30 @@
 .visible{
     opacity: 1;
 }
+
+/* scrollbar */
+
+/* For webkit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 300px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color7); /* Color of the thumb */ /* Rounded corners of the thumb */
+  }
+
+  ::-moz-scrollbar {
+    width: 12px;
+    height: 300px; /* Adjust the height to your liking */
+  }
+  
+  /* For Microsoft Edge and Internet Explorer */
+  ::-ms-scrollbar {
+    width: 12px;
+    height: 300px; /* Width of the scrollbar */
+  }
+  
+  ::-ms-scrollbar-thumb {
+    background-color: var(--color7); /* Color of the thumb */ /* Rounded corners of the thumb */
+  }

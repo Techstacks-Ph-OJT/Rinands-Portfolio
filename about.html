@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/content.css">
         <link rel="stylesheet" href="css/hamburger.css">
+        <link rel="stylesheet" href="css/sidebar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
     <body>
@@ -40,6 +41,15 @@
                     <span class="line"></span>
                 </div>
             </header>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li><a class="link" href="index.html">home</a></li>
+                <li><a class="link" href="contact.html">contact</a></li>
+                <li><a class="link" href="portfolio.html">portfolio</a></li>
+                <li><a class="link" href="blog.html">blogs</a></li>
+            </ul>
+              <div class="small-size">@ 2023 John Rinand Sta. Ines</div>
         </div>
         <main>
             <div class="first-main-about">
@@ -217,10 +227,5 @@
             </div>
         </footer>
     </body>
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.hamburger-menu');
-            menu.classList.toggle('open');
-        }
-    </script>
+    <script src="js/hamburger.js"></script>
 </html>

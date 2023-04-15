@@ -11,13 +11,13 @@
         <link rel="stylesheet" href="css/content.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/hamburger.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/preloader.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <style>
-        </style>
     </head>
     <body>
         <div>
-            <header class="header">
+            <header class="header" id="header">
                 <div class="left-section">
                     <img class="logo-img" alt="logo" src="img/logo.png">
                 </div>
@@ -42,6 +42,25 @@
                 </div>
             </header>
         </div>
+        <header class="navbar transparent" id="navbar">
+            <div class="left-section-block left-section-nonblock">
+                <img class="logo-img" alt="logo" src="img/logo.png">
+            </div>
+            <div class="hamburger-menu-block" onclick="toggleMenusecond()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </header>
+        <div class="sidebar">
+            <ul>
+                <li><a class="link" href="index.html">home</a></li>
+                <li><a class="link" href="contact.html">contact</a></li>
+                <li><a class="link" href="portfolio.html">portfolio</a></li>
+                <li><a class="link" href="blog.html">blogs</a></li>
+            </ul>
+              <div class="small-size">@ 2023 John Rinand Sta. Ines</div>
+        </div>
         <main>
             <div class="first-main">
                 <div class="left-container">
@@ -53,7 +72,7 @@
                             </div>
                             <div class="blockbox-helping-container">
                                 <div class="blockbox2"></div>
-                                <div class="name-main">Sta. Ines</div>
+                                <div class="name-main line-height95">Sta. Ines</div>
                             </div>
                         </div>
                         <div class="line-container"></div>
@@ -78,7 +97,10 @@
                     </div>
                 </div>
                 <div class="middle-container">
-                    <img class="person-img" alt="person" src="img/front.png">
+                    <div class="blockbox-helping-container">
+                        <div class="blockbox"></div>
+                        <img class="person-img" alt="person" src="img/front.png">
+                    </div>
                 </div>
                 <div class="middle-container-secondary">
                     <img class="person-img-secondary" alt="person" src="img/front.png">
@@ -108,11 +130,11 @@
                 </div>
                 <div class="hidden-container">
                     <div class="blockbox-helping-container">
-                        <div class="blockbox"></div>
+                        <div class="blockbox2"></div>
                         <div class="title-container name-main">ORIGINAL</div>
                     </div>
                     <div class="blockbox-helping-container2">
-                        <div class="slide-up" style="display: flex; flex-direction: column; align-items: center; gap: 0; margin-top: 10px;">
+                        <div class="slide-up original-flex">
                             <div class="para-container">Lorem ipsum dolor sit amet consectetur.</div>
                             <div class="para-container">Asperiores qui voluptatum corporis eum facilis deleniti</div>
                         </div>
@@ -132,17 +154,17 @@
                         <div class="ttp-container">
                             <div class="blockbox-helping-container2">
                                 <div class="scroll-animation-slide-up">
-                                    <div class="text-container">- Contact</div>
+                                    <div class="text-container scroll-name-main">- Contact</div>
                                 </div>
                             </div>
                             <div class="blockbox-helping-container">
                                 <div class="scroll-blockbox-animation"></div>
-                                <div class="scroll-name-main title-container" style="line-height: 38px;">Any Type Of Query
+                                <div class="scroll-name-main title-container line-height">Any Type Of Query
                                 & Discussion.</div>
                             </div>
                             <div class="blockbox-helping-container2">
                                 <div class="scroll-animation-slide-up">
-                                    <div class="para-container">
+                                    <div class="para-container scroll-name-main">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                     </div>
                                 </div>
@@ -151,8 +173,8 @@
                         <div class="blockbox-helping-container2">
                             <div class="scroll-animation-slide-up">
                                 <div class="button-container">
-                                    <button class="button">Contact</button>
-                                    <button class="button button-arrow-hover">&#8594</button>
+                                    <button class="button opacity"><a class="add-yellow" href="contact.html">Contact</a></button>
+                                    <button class="button opacity button-arrow-hover"><a class="add-yellow" href="contact.html">&#8594</a></button>
                                 </div>
                             </div>
                         </div>
@@ -161,26 +183,26 @@
                         <div class="ttp-container">
                             <div class="blockbox-helping-container">
                                 <div class="scroll-blockbox-animation2"></div>
-                                <div class="scroll-name-main title-container" style="line-height: 38px;">You can't use up creativity, the more you use, more you have in your significant mind.</div>
+                                <div class="scroll-name-main title-container line-height">You can't use up creativity, the more you use, more you have in your significant mind.</div>
                             </div>
                             <div class="blockbox-helping-container2">
                                 <div class="scroll-animation-slide-up">
-                                    <div class="para-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor illo sunt hic voluptates. Eveniet numquam quia rem vitae sed?</div>
+                                    <div class="para-container scroll-name-main">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor illo sunt hic voluptates. Eveniet numquam quia rem vitae sed?</div>
                                 </div>
                             </div>    
                         </div>
                         <div class="words-container">
                             <div class="blockbox-helping-container">
                                 <div class="scroll-blockbox-animation"></div>
-                                <div class="nw-container scroll-name-main" style="align-items: center;">
-                                    <span class="number-style" style="line-height: 100%;">4</span>
+                                <div class="nw-container scroll-number-main">
+                                    <span class="number-style">4</span>
                                     <div class="word-style">Years of <br>Experience</div>
                                 </div>
                             </div>
                             <div class="blockbox-helping-container">
                                 <div class="scroll-blockbox-animation2"></div>
-                                <div class="nw-container scroll-name-main" style="align-items: center;">
-                                    <div style="line-height: 100%;" class="number-style">28</div>
+                                <div class="nw-container scroll-number-main">
+                                    <div class="number-style">28</div>
                                     <div class="word-style">Satisfied <br>Clients</div>
                                 </div>
                             </div>
@@ -197,8 +219,8 @@
                             <div class="contentbox-container">
                                 <!-- <div><img class="icon-box" alt="cube" src="img/cube.svg"></div> -->
                                 <div class="tp-container">
-                                    <div class="title-container"><span class="display">User Interface</span><span class="none">UI/UX</span> Designer.</div>
-                                    <div class="para-container add-white">120 projects</div>
+                                    <div class="title-container2"><span class="display">User Interface</span><span class="none">UI/UX</span> Designer.</div>
+                                    <div class="para-container add-white opacity">120 projects</div>
                                 </div>
                             </div>
                         </div>
@@ -212,8 +234,8 @@
                             <div class="contentbox-container">
                                 <!-- <div><img class="icon-box" alt="cube" src="img/pen.svg"></div> -->
                                 <div class="tp-container">
-                                    <div class="title-container">Product Designer.</div>
-                                    <div class="para-container">120 projects</div>
+                                    <div class="title-container2">Product Designer.</div>
+                                    <div class="para-container opacity">120 projects</div>
                                 </div>
                             </div>
                         </div>
@@ -227,8 +249,8 @@
                             <div class="contentbox-container">
                                 <!-- <div><img class="icon-box" alt="cube" src="img/laptop.svg"></div> -->
                                 <div class="tp-container">
-                                    <div class="title-container">Full Stack Developer.</div>
-                                    <div class="para-container">120 projects</div>
+                                    <div class="title-container2">Full Stack Developer.</div>
+                                    <div class="para-container opacity">120 projects</div>
                                 </div>
                             </div>
                         </div>
@@ -281,21 +303,39 @@
                     <div class="left-third-container">
                         <div class="inside-first-container">
                             <div class="ttp-container">
-                                <div class="text-container">- Portfolio</div>
-                                <div class="title-container">All Creative Works,
+                                <div class="blockbox-helping-container2">
+                                    <div class="scroll-animation-slide-up2">
+                                        <div class="text-container scroll-name-main4">- Portfolio</div>
+                                    </div>
+                                </div>
+                                <div class="blockbox-helping-container">
+                                    <div class="scroll-blockbox-animation7"></div>
+                                    <div class="title-container scroll-name-main4">All Creative Works,
                                     Selected projects.</div>
-                                <div class="para-container">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </div>
+                                <div class="blockbox-helping-container2">
+                                    <div class="scroll-animation-slide-up2">
+                                        <div class="para-container scroll-name-main4">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="button-container">
-                                <button class="button">Contact</button>
-                                <button class="button button-arrow-hover">&#8594</button>
+                            <div class="blockbox-helping-container2">
+                                <div class="scroll-animation-slide-up2">
+                                    <div class="button-container">
+                                        <button class="button opacity"><a class="add-yellow" href="portfolio.html">My Works</a></button>
+                                        <button class="button opacity button-arrow-hover"><a class="add-yellow" href="portfolio.html">&#8594</a></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="inside-second-container">
-                            <div class="dev-img">
-                                <img class="proj-img" alt="filanthropy" src="img/proj1.jpg">
+                            <div class="blockbox-helping-container">
+                                <div class="scroll-blockbox-animation9"></div>
+                                <div class="dev-img scroll-name-main5">
+                                    <img class="proj-img" alt="filanthropy" src="img/proj1.jpg">
+                                </div>
                             </div>
                             <div class="contentBx">
                                 <div class="content">
@@ -307,8 +347,11 @@
                     </div>
                     <div class="right-third-container">
                         <div class="inside2-first-container">
-                            <div class="dev-img">
-                                <img class="proj-img" alt="thecrow" src="img/proj2.jpg">
+                            <div class="blockbox-helping-container">
+                                <div class="scroll-blockbox-animation8"></div>
+                                <div class="dev-img scroll-name-main4">
+                                    <img class="proj-img" alt="thecrow" src="img/proj2.jpg">
+                                </div>
                             </div>
                             <div class="contentBx">
                                 <div class="content">
@@ -317,8 +360,11 @@
                             </div>
                         </div>
                         <div class="inside2-second-container">
-                            <div class="dev-img">
-                                <img class="proj-img" alt="youtubeclone" src="img/proj3.jpg">
+                            <div class="blockbox-helping-container">
+                                <div class="scroll-blockbox-animation10"></div>
+                                <div class="dev-img scroll-name-main6">
+                                    <img class="proj-img" alt="youtubeclone" src="img/proj3.jpg">
+                                </div>
                             </div>
                             <div class="contentBx">
                                 <div class="content">
@@ -332,58 +378,109 @@
             <div class="fourth-main">
                 <div class="upper-container">
                     <div class="tt-container">
-                        <div class="text-container">- Blog</div>
-                        <div class="title-container">What's New?
+                        <div class="blockbox-helping-container2">
+                            <div class="scroll-animation-slide-up3">
+                                <div class="text-container scroll-name-main7">- Blog</div>
+                            </div>
+                        </div>
+                        <div class="blockbox-helping-container">
+                            <div class="scroll-blockbox-animation11"></div>
+                            <div class="title-container scroll-name-main7">What's New?
                             My Blog and News.</div>
+                        </div>
                     </div>
                     <div class="list-blog-container">
                         <div class="blog-container">
-                            <div class="blog-helping-container">
-                                <div class="para-container date-para">Feb 26 &middot; Blog</div>
-                                <div class="semi-title">Building Your First Website: A Step-by-Step Guide</div>
+                            <div class="blockbox-helping-container-another2">
+                                <div class="scroll-blockbox-animation12"></div>
+                                <div class="blog-helping-container scroll-name-main7">
+                                    <div class="para-container date-para">Feb 26 &middot; Blog</div>
+                                    <div class="semi-title opacity">Building Your First Website: A Step-by-Step Guide</div>
+                                </div>
+                            </div>    
+                            <div>
+                                <div class="blockbox-helping-container2">
+                                    <div class="scroll-animation-slide-up3">
+                                        <button class="button button-arrow-hover scroll-name-main7">&#8594</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div><button class="button button-arrow-hover">&#8594</button></div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="blog-helping-container">
-                                <div class="para-container date-para">Feb 26 &middot; Blog</div>
-                                <div class="semi-title">Debugging Tips and Tricks for Web Developers</div>
+                            <div class="blockbox-helping-container-another2">
+                                <div class="scroll-blockbox-animation11"></div>
+                                <div class="blog-helping-container scroll-name-main7">
+                                    <div class="para-container date-para">Feb 26 &middot; Blog</div>
+                                    <div class="semi-title opacity">Debugging Tips and Tricks for Web Developers</div>
+                                </div>    
                             </div>
-                            <div><button class="button button-arrow-hover">&#8594</button></div>
+                            <div>
+                                <div class="blockbox-helping-container2">
+                                    <div class="scroll-animation-slide-up3">
+                                        <button class="button button-arrow-hover scroll-name-main7">&#8594</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="blog-helping-container">
-                                <div class="para-container date-para">Feb 26 &middot; Blog</div>
-                                <div class="semi-title">Best Practices for Web Development Security</div>
+                            <div class="blockbox-helping-container-another2">
+                                <div class="scroll-blockbox-animation12"></div>
+                                <div class="blog-helping-container scroll-name-main7">
+                                    <div class="para-container date-para">Feb 26 &middot; Blog</div>
+                                    <div class="semi-title opacity">Best Practices for Web Development Security</div>
+                                </div>
                             </div>
-                            <div><button class="button button-arrow-hover">&#8594</button></div>
+                            <div>
+                                <div class="blockbox-helping-container2">
+                                    <div class="scroll-animation-slide-up3">
+                                        <button class="button button-arrow-hover scroll-name-main7">&#8594</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="lower-container">
                     <div class="testimonial-img">
-                        <img class="testimonial-img-class" alt="testimonial1" src="img/testimonial1.jpg">
+                        <div class="blockbox-helping-container">
+                            <div class="scroll-blockbox-animation13"></div>
+                            <img class="testimonial-img-class scroll-name-main8" alt="testimonial1" src="img/testimonial1.jpg">
+                        </div>
                     </div>
                     <div class="testimonial-words">
                         <div class="person-words">
-                            <img class="quote-img" alt="quote" src="img/quote.svg">
-                            <div class="title-container">Rinand's work on a website development project exceeded my expectations. He paid close attention to the details and successfully brought my vision to life.</div>
+                            <div class="blockbox-helping-container2">
+                                <div class="scroll-animation-slide-up4">
+                                    <img class="quote-img scroll-name-main8" alt="quote" src="img/quote.svg">
+                                </div>
+                            </div>
+                            <div class="blockbox-helping-container">
+                                <div class="scroll-blockbox-animation14"></div>
+                                <div class="title-container scroll-name-main8">Rinand's work on a website development project exceeded my expectations. He paid close attention to the details and successfully brought my vision to life.</div>
+                            </div>
                         </div>
                         <div class="hidden-testimonial-class">
                             <div class="testimonial2-img">
                                 <img class="testimonial2-img-class" alt="testimonial1" src="img/testimonial1.jpg">
                             </div>
-                            <div class="person-name">
-                                <div class="semi-title">Jhonas Lalo</div>
-                                <div class="para-container">CEO of Fullware</div>
+                            <div class="blockbox-helping-container2">
+                                <div class="scroll-animation-slide-up4">
+                                    <div class="person-name scroll-name-main8">
+                                        <div class="semi-title opacity">Jhonas Lalo</div>
+                                        <div class="para-container opacity">CEO of Fullware</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="slidebar">
-                            <div class="rectangle-muna"></div>
-                            <div class="rectangle-muna2"></div>
-                            <div class="rectangle-muna2"></div>
+                        <div class="blockbox-helping-container-another3">
+                            <div class="scroll-blockbox-animation13"></div>
+                            <div class="slidebar scroll-name-main8">
+                                <div class="rectangle-muna"></div>
+                                <div class="rectangle-muna2"></div>
+                                <div class="rectangle-muna2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -391,31 +488,57 @@
             <div class="fifth-main">
                 <div class="left-fifth-container">
                     <div class="ttp-container">
-                        <div class="title-container">Got a Project?
-                            Let's talk.</div>
-                        <div class="para-container">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        <div class="blockbox-helping-container">
+                            <div class="scroll-blockbox-animation15"></div>
+                            <div class="title-container scroll-name-main9">Got a Project?
+                                Let's talk.</div>
+                        </div>
+                        <div class="blockbox-helping-container2">
+                            <div class="scroll-animation-slide-up5">
+                                <div class="para-container scroll-name-main9">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="button-container">
-                        <button class="button">stainesrinand@gmail.com</button>
-                        <button class="button button-arrow-hover">&#8594</button>
+                    <div class="blockbox-helping-container2">
+                        <div class="scroll-animation-slide-up5">
+                            <div class="button-container scroll-name-main9">
+                                <button class="button scroll-name-main9"><a class="add-yellow" href="mailto:stainesrinand@gmail.com">stainesrinand@gmail.com</a></button>
+                                <button class="button scroll-name-main9 button-arrow-hover"><a class="add-yellow" href="mailto:stainesrinand@gmail.com">&#8594</a></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="right-fifth-container gap">
-                    <div class="title-container pre-space">Estimate your project? Let me know here.</div>
+                    <div class="blockbox-helping-container">
+                        <div class="scroll-blockbox-animation16"></div>
+                        <div class="title-container pre-space scroll-name-main9">Estimate your project? Let me know here.</div>
+                    </div>
                     <div class="flex-container">
                         <div class="blog-container">
-                            <div class="semi-title">What's your name?</div>
+                            <div class="blockbox-helping-container-another3">
+                                <div class="scroll-animation-slide-up5">
+                                    <div class="semi-title scroll-name-main9">What's your name?</div>
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="semi-title">Your fancy email</div>
+                            <div class="blockbox-helping-container-another3">
+                                <div class="scroll-animation-slide-up5">
+                                    <div class="semi-title scroll-name-main9">Your fancy email</div>
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="semi-title">Tell me about your project</div>
-                            <div><button class="button button-arrow-hover">&#8594</button></div>
+                            <div class="blockbox-helping-container-another3">
+                                <div class="scroll-animation-slide-up5 flex-row">
+                                    <div class="semi-title scroll-name-main9">Tell me about your project</div>
+                                    <div><button class="button scroll-name-main9 button-arrow-hover">&#8594</button></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -437,88 +560,19 @@
         </footer>
         <div class="bottom-line"></div>
     </body>
+    <script src="js/index.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/preloader.js"></script>
     <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.hamburger-menu');
-            menu.classList.toggle('open');
-        }
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {scrollFunction()};
         
-        const scrollanimation = document.querySelectorAll('.scroll-animation-slide-up');
-        const scrollblockbox = document.querySelectorAll('.scroll-blockbox-animation');
-        const scrollblockbox2 = document.querySelectorAll('.scroll-blockbox-animation2');
-        const scrollblockbox3 = document.querySelectorAll('.scroll-blockbox-animation3');
-        const scrollblockbox4 = document.querySelectorAll('.scroll-blockbox-animation4');
-        const scrollblockbox5 = document.querySelectorAll('.scroll-blockbox-animation5');
-        const scrollblockbox6 = document.querySelectorAll('.scroll-blockbox-animation6');
-        const scrollnamemain = document.querySelectorAll('.scroll-name-main');
-        const scrollnamemain2 = document.querySelectorAll('.scroll-name-main2');
-        const scrollnamemain3 = document.querySelectorAll('.scroll-name-main3');
-        const scrollimgmain = document.querySelectorAll('.scroll-img-main');
-
-        const handleScroll = () => {
-        const threshold = window.innerHeight * 0.2; // set threshold to 20% of viewport height
-        if (window.scrollY > threshold) {
-            // add classes to elements
-            scrollanimation.forEach(element => {
-            element.classList.add('slide-up', 'visible');
-            });
-            scrollblockbox.forEach(element => {
-            element.classList.add('blockbox', 'visible');
-            });
-            scrollblockbox2.forEach(element => {
-            element.classList.add('blockbox2', 'visible');
-            });
-            scrollnamemain.forEach(element => {
-            element.classList.add('name-main');
-            });
-            scrollnamemain2.forEach(element => {
-            element.classList.add('name-main');
-            });
-            // remove event listener after it is triggered
-            window.removeEventListener('scroll', handleScroll);
+        function scrollFunction() {
+          if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-100%";
+          }
         }
-        };
-
-        const handleScrollYOver1000 = () => {
-        const threshold = window.innerHeight * 0.5; // set threshold to 50% of viewport height
-        if (window.scrollY > threshold) {
-            // add classes to elements
-            scrollimgmain.forEach(element => {
-            element.classList.add('img-main', 'visible');
-            });
-            scrollblockbox3.forEach(element => {
-            element.classList.add('blockbox', 'visible');
-            });
-            scrollblockbox4.forEach(element => {
-            element.classList.add('blockbox2', 'visible');
-            });
-            // remove event listener after it is triggered
-            window.removeEventListener('scroll', handleScrollYOver1000);
-        }
-        };
-
-
-        const handleScrollYOver1300 = () => {
-        const threshold = window.innerHeight * 0.8; // set threshold to 80% of viewport height
-        if (window.scrollY > threshold) {
-            // add classes to elements
-            scrollnamemain3.forEach(element => {
-            element.classList.add('name-main');
-            });
-            scrollblockbox5.forEach(element => {
-            element.classList.add('blockbox', 'visible');
-            });
-            scrollblockbox6.forEach(element => {
-            element.classList.add('blockbox2', 'visible');
-            });
-            // remove event listener after it is triggered
-            window.removeEventListener('scroll', handleScrollYOver1300);
-        }
-        };
-
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('scroll', handleScrollYOver1000);
-        window.addEventListener('scroll', handleScrollYOver1300);
     </script>
 </html>

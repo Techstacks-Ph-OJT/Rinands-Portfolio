@@ -1,0 +1,160 @@
+:root{
+    --color1: #ffffff;
+    --color2: #f5c257;
+    --color3: #b7b7b7;
+    --color4: #f5ae42;
+    --color5: #424658;
+    --color6: #252730;
+    --color7: #161720;
+    --bgcolor: #242734;
+    --mainfont: 'RealHeadWebW04-Medium';
+    --secondaryfont: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --sidebarul: clamp(3.4375rem, 3.3067rem + 0.4926vw, 3.75rem);
+    --ahrefsize: clamp(3.75rem, 2.4415rem + 4.9261vw, 6.875rem);
+}
+
+
+.sidebar {
+    background: 
+    repeating-radial-gradient(var(--color6) 0 0.0001%, var(--color7) 0 0.0002%) 50% 0/2500px 2500px,
+    repeating-conic-gradient(var(--color6) 0 0.0001%,var(--color7) 0 0.0002%) 60% 60%/2500px 2500px;
+    background-blend-mode: difference;
+    animation: b .2s infinite alternate;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; /* Changed to 100% */
+    z-index: 1000;
+    left: -100%;
+    overflow: hidden;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    width: fit-content;
+    height: 92%;
+    font-size: var(--sidebarul);
+}
+
+.sidebar li {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: var(--color3);
+}
+
+a[href="index.html"], a[href="contact.html"],
+a[href="portfolio.html"], a[href="blog.html"]{
+    position: relative;
+}
+
+a.link[href="index.html"]:hover::before{
+    content: '01';
+    position: absolute;
+    font-size: var(--ahrefsize);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color3);
+    font-weight: bold;
+    z-index: -10;
+    opacity: .5;
+}
+
+a.link[href="contact.html"]:hover::before{
+    content: '02';
+    position: absolute;
+    font-size: var(--ahrefsize);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color3);
+    font-weight: bold;
+    z-index: -10;
+    opacity: .5;
+}
+
+a.link[href="portfolio.html"]:hover::before{
+    content: '03';
+    position: absolute;
+    font-size: var(--ahrefsize);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color3);
+    font-weight: bold;
+    z-index: -10;
+    opacity: .5;
+}
+
+a.link[href="blog.html"]:hover::before{
+    content: '04';
+    position: absolute;
+    font-size: var(--ahrefsize);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color3);
+    font-weight: bold;
+    z-index: -10;
+    opacity: .5;
+}
+
+.sidebar a:hover{
+    color: var(--color1);
+}
+
+.sidebar a:hover::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color1);
+    animation-name: strike;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+.small-size{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color1);
+    height: 8%;
+    width: 100%;
+    letter-spacing: 1px;
+    font-family: var(--secondaryfont);
+}
+
+@keyframes strike{
+    0%   { width : 0; }
+    100% { width: 100%; }
+}
+
+@keyframes b{
+    100% {background-position: 50% 0, 60% 50%}
+  }

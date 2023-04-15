@@ -4,6 +4,15 @@
   position: relative;
   width: 30px;
   height: 20px;
+  z-index: 1005;
+}
+
+.hamburger-menu-block{
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  z-index: 1005;
 }
 
 .line {

@@ -4,9 +4,37 @@
     justify-content: space-between;
     padding: 30px 10.42%;
     width: 100%;
+    background-color: #323648;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10.42%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.5s;
+    z-index: 1005;
+}
+
+.transparent {
+    background-color: #242734;
+}
+  
+
 .left-section{
+}
+
+.left-section-block{
+    opacity: 0;
+}
+
+.left-section-nonblock{
+    opacity: 1;
 }
 
 .logo-img{
@@ -19,6 +47,7 @@
     gap: 80px;
     flex: 1;
     font-size: 16px;
+    z-index: 1;
 }
 
 .hover-underline-animation {
