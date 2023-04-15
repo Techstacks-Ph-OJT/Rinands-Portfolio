@@ -135,8 +135,8 @@
                     </div>
                     <div class="blockbox-helping-container2">
                         <div class="slide-up original-flex">
-                            <div class="para-container">Lorem ipsum dolor sit amet consectetur.</div>
-                            <div class="para-container">Asperiores qui voluptatum corporis eum facilis deleniti</div>
+                            <div class="para-container opacity">Lorem ipsum dolor sit amet consectetur.</div>
+                            <div class="para-container opacity">Asperiores qui voluptatum corporis eum facilis deleniti</div>
                         </div>
                     </div>
                     <a href="#scrolldown">
@@ -570,6 +570,7 @@
         function scrollFunction() {
           if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
             document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar").style.display = "flex";
           } else {
             document.getElementById("navbar").style.top = "-100%";
           }

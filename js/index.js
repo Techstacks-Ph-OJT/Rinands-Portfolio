@@ -32,31 +32,47 @@ const scrollnamemain9 = document.querySelectorAll('.scroll-name-main9');
 const scrollimgmain = document.querySelectorAll('.scroll-img-main');
 
 const handleScroll = () => {
-const threshold = window.innerHeight * 0.7; // set threshold to 20% of viewport height
-if (window.scrollY > threshold) {
-    // add classes to elements
-    scrollanimation.forEach(element => {
-    element.classList.add('slide-up', 'visible');
-    });
-    scrollblockbox.forEach(element => {
-    element.classList.add('blockbox', 'visible');
-    });
-    scrollblockbox2.forEach(element => {
-    element.classList.add('blockbox2', 'visible');
-    });
-    scrollnamemain.forEach(element => {
-    element.classList.add('name-main');
-    });
-    scrollnumbermain.forEach(element => {
-    element.classList.add('name-main-number');
-    });
-    scrollnamemain2.forEach(element => {
-    element.classList.add('name-main');
-    });
-    // remove event listener after it is triggered
-    window.removeEventListener('scroll', handleScroll);
-}
-};
+    let threshold;
+    if (window.innerWidth < 1025 && window.innerWidth > 768) {
+      threshold = window.innerHeight * 0.8; // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 769 && window.innerWidth > 425) {
+        threshold = window.innerHeight * 0.93; // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 426 && window.innerWidth > 375) {
+        threshold = window.innerHeight * 1.5; // set threshold to 50% of viewport height for mobile screens
+    }
+    else {
+      threshold = window.innerHeight * 0.7; // set threshold to 70% of viewport height for desktop screens
+    }
+    
+    if (window.scrollY > threshold) {
+      // add classes to elements
+      scrollanimation.forEach(element => {
+        element.classList.add('slide-up', 'visible');
+      });
+      scrollblockbox.forEach(element => {
+        element.classList.add('blockbox', 'visible');
+      });
+      scrollblockbox2.forEach(element => {
+        element.classList.add('blockbox2', 'visible');
+      });
+      scrollnamemain.forEach(element => {
+        element.classList.add('name-main');
+      });
+      scrollnumbermain.forEach(element => {
+        element.classList.add('name-main-number');
+      });
+      scrollnamemain2.forEach(element => {
+        element.classList.add('name-main');
+      });
+      // remove event listener after it is triggered
+      window.removeEventListener('scroll', handleScroll);
+    }
+  };
+  
+window.addEventListener('scroll', handleScroll);
+  
 
 const handleScrollYOver1000 = () => {
 const threshold = window.innerHeight * 1.3; // set threshold to 50% of viewport height

@@ -11,10 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 10.42%;
+    padding: 25px 10.42%;
     overflow: hidden;
     position: fixed;
-    top: 0;
+    top: -100%;
     width: 100%;
     background-color: transparent;
     transition: all 0.5s;
