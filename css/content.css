@@ -924,7 +924,7 @@
     height: inherit;
     background: var(--color4);
     position: absolute;
-    animation: mainBlock .8s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: mainBlock .7s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
     z-index: 1000;
 }
@@ -951,7 +951,7 @@
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: .6s;
+    animation-delay: .5s;
     opacity: 0;
     display: flex;
     align-items: center;
@@ -961,7 +961,7 @@
 
 .name-main2{
     animation: secFadeIn 2s forwards;
-    animation-delay: .6s;
+    animation-delay: .5s;
     opacity: 0;
     display: inline-block;
     line-height: 90%;
@@ -970,7 +970,7 @@
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: .6s;
+    animation-delay: .5s;
     opacity: 0;
     position: relative;
 }
@@ -978,7 +978,7 @@
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
     animation: mainFadeIn 2s forwards;
-    animation-delay: .6s;
+    animation-delay: .5s;
     opacity: 0;
     position: relative;
 }
@@ -987,7 +987,7 @@
     height: inherit;
     background: var(--color7);
     position: absolute;
-    animation: mainBlock .8s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation: mainBlock .7s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
     z-index: 100;
 }

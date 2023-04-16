@@ -34,20 +34,46 @@ const scrollimgmain = document.querySelectorAll('.scroll-img-main');
 
 const handleScroll = () => {
     let threshold;
-    if (window.innerWidth < 1025 && window.innerWidth > 768) {
-      threshold = window.innerHeight * 0.8; // set threshold to 50% of viewport height for mobile screens
+    if (window.innerWidth < 1025 && window.innerWidth > 820) {
+      if (window.innerHeight = 600){
+        threshold = window.innerHeight * 0.8;
+      }
+      else{
+        threshold = window.innerHeight * 0.4;
+      } // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 821 && window.innerWidth > 768) {
+      if (window.innerHeight = 1180){
+        threshold = window.innerHeight * 0.2;
+      }
+      else{
+        threshold = window.innerHeight * 100;
+      } // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+      threshold = window.innerHeight * 0.5;
     }
     else if (window.innerWidth < 769 && window.innerWidth > 425) {
-        threshold = window.innerHeight * 0.93; // set threshold to 50% of viewport height for mobile screens
+      if (window.innerHeight = 1024){
+        threshold = window.innerHeight * 0.4; // set threshold to 50% of viewport height for mobile screens
+      }
+      else{
+        threshold = window.innerHeight * 0.6; // set threshold to 50% of viewport height for mobile screens
+      }
     }
     else if (window.innerWidth < 426 && window.innerWidth > 375) {
-        threshold = window.innerHeight * 1.25; // set threshold to 50% of viewport height for mobile screens
+        threshold = window.innerHeight * 0.9; // set threshold to 50% of viewport height for mobile screens
     }
     else if (window.innerWidth < 376 && window.innerHeight < 813 && window.innerWidth > 320) {
-        threshold = window.innerHeight * 1.35; // set threshold to 50% of viewport height for mobile screens
+        threshold = window.innerHeight * 1; // set threshold to 50% of viewport height for mobile screens
     }
-    else if (window.innerWidth < 321 && window.innerHeight < 569) {
-        threshold = window.innerHeight * 1.7; // set threshold to 50% of viewport height for mobile screens
+    else if (window.innerWidth < 321 && window.innerWidth > 0) {
+      if (window.innerHeight = 568){
+        threshold = window.innerHeight * 1.5;
+      }
+      else{
+        threshold = window.innerHeight * 1.7;
+      } // set threshold to 50% of viewport height for mobile screens
     }
     else {
       threshold = window.innerHeight * 0.7; // set threshold to 70% of viewport height for desktop screens
@@ -83,14 +109,35 @@ window.addEventListener('scroll', handleScroll);
 
 const handleScrollYOver1000 = () => {
     let threshold;
-    if (window.innerWidth < 1025 && window.innerWidth > 768) {
-      threshold = window.innerHeight * 1.45; // set threshold to 50% of viewport height for mobile screens
+    if (window.innerWidth < 1025 && window.innerWidth > 820) {
+      if (window.innerHeight = 600){
+        threshold = window.innerHeight * 1.8;
+      }
+      else{
+        threshold = window.innerHeight * 1.2;
+      } // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 821 && window.innerWidth > 768) {
+      if (window.innerHeight = 1180){
+        threshold = window.innerHeight * 0.5;
+      }
+      else{
+        threshold = window.innerHeight * 0.5;
+      } // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+      threshold = window.innerHeight * 1.1;
     }
     else if (window.innerWidth < 769 && window.innerWidth > 425) {
-        threshold = window.innerHeight * 1.7; // set threshold to 50% of viewport height for mobile screens
+      if (window.innerHeight = 926){
+        threshold = window.innerHeight * 1.4; // set threshold to 50% of viewport height for mobile screens
+      }
+      else{
+        threshold = window.innerHeight * 1.15; // set threshold to 50% of viewport height for mobile screens
+      }
     }
     else if (window.innerWidth < 426 && window.innerWidth > 375) {
-        threshold = window.innerHeight * 2; // set threshold to 50% of viewport height for mobile screens
+        threshold = window.innerHeight * 1.5; // set threshold to 50% of viewport height for mobile screens
     }
     else if (window.innerWidth < 376 && window.innerHeight < 813 && window.innerWidth > 320) {
         threshold = window.innerHeight * 1.9; // set threshold to 50% of viewport height for mobile screens
@@ -141,11 +188,27 @@ window.addEventListener('scroll', handleScrollYOver1000);
 
 const handleScrollYOver1300 = () => {
     let threshold;
-    if (window.innerWidth < 1025 && window.innerWidth > 768) {
-      threshold = window.innerHeight * 1.9; // set threshold to 50% of viewport height for mobile screens
+    if (window.innerWidth < 1025 && window.innerWidth > 820) {
+      if (window.innerHeight = 600){
+        threshold = window.innerHeight * 2.5;
+      }
+      else{
+        threshold = window.innerHeight * 2.3; // set threshold to 50% of viewport height for mobile screens
+      } // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 821 && window.innerWidth > 768) {
+      if (window.innerHeight = 1180){
+        threshold = window.innerHeight * 0.8;
+      }
+      else{
+        threshold = window.innerHeight * 0.8;
+      } // set threshold to 50% of viewport height for mobile screens
+    }
+    else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+      threshold = window.innerHeight * 1.5;
     }
     else if (window.innerWidth < 769 && window.innerWidth > 530) {
-        threshold = window.innerHeight * 3.9; // set threshold to 50% of viewport height for mobile screens
+        threshold = window.innerHeight * 2.6; // set threshold to 50% of viewport height for mobile screens
     }
     else if (window.innerWidth < 531 && window.innerWidth > 425) {
         threshold = window.innerHeight * 3.6; // set threshold to 50% of viewport height for mobile screens
@@ -192,14 +255,51 @@ window.addEventListener('scroll', handleScrollYOver1300);
 
 const handleScrollYOver1700 = () => {
   let threshold;
-  if (window.innerWidth < 1025 && window.innerWidth > 768) {
-    threshold = window.innerHeight * 2.7; // set threshold to 50% of viewport height for mobile screens
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 3;
+    }
+    else{
+      threshold = window.innerHeight * 2.7; // set threshold to 50% of viewport height for mobile screens
+    } // set threshold to 50% of viewport height for mobile screens
   }
-  else if (window.innerWidth < 769 && window.innerWidth > 530) {
-      threshold = window.innerHeight * 5; // set threshold to 50% of viewport height for mobile screens
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 1;
+    }
+    else{
+      threshold = window.innerHeight * 1;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 2;
+  }
+  else if (window.innerWidth < 769 && window.innerWidth > 425) {
+    if (window.innerHeight = 926){
+      threshold = window.innerHeight * 3.3; // set threshold to 50% of viewport height for mobile screens
+    }
+    else{
+      threshold = window.innerHeight * 3.25; // set threshold to 50% of viewport height for mobile screens
+    }
   }
   else if (window.innerWidth < 426 && window.innerWidth > 375) {
-    threshold = window.innerHeight * 4; // set threshold to 50% of viewport height for mobile screens
+    threshold = window.innerHeight * 3.2; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 4.05;
+    }
+    else{
+      threshold = window.innerHeight * 3.9;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 321 && window.innerWidth > 0) {
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 4.8;
+    }
+    else{
+      threshold = window.innerHeight * 2.75;
+    } // set threshold to 50% of viewport height for mobile screens
   }
   else {
     threshold = window.innerHeight * 2.4; // set threshold to 70% of viewport height for desktop screens
@@ -225,20 +325,54 @@ window.addEventListener('scroll', handleScrollYOver1700);
 
 const handleScrollYOver1900 = () => {
   let threshold;
-  if (window.innerWidth < 1025 && window.innerWidth > 768) {
-    threshold = window.innerHeight * 2.7; // set threshold to 50% of viewport height for mobile screens
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 3;
+    }
+    else{
+      threshold = window.innerHeight * 2.7; // set threshold to 50% of viewport height for mobile screens
+    }
+  }
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 1.1;
+    }
+    else{
+      threshold = window.innerHeight * 1.1;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 2;
   }
   else if (window.innerWidth < 769 && window.innerWidth > 530) {
-      threshold = window.innerHeight * 6.8; // set threshold to 50% of viewport height for mobile screens
+      threshold = window.innerHeight * 4.5; // set threshold to 50% of viewport height for mobile screens
   }
   else if (window.innerWidth < 429 && window.innerHeight > 925 && window.innerWidth > 425) {
-    threshold = window.innerHeight * 4; // set threshold to 50% of viewport height for mobile screens
+    threshold = window.innerHeight * 3.85; // set threshold to 50% of viewport height for mobile screens
   }
-  else if (window.innerWidth < 426 && window.innerWidth > 320) {
-    threshold = window.innerHeight * 4; // set threshold to 50% of viewport height for mobile screens
+  else if (window.innerWidth < 426 && window.innerWidth > 375) {
+    if (window.innerHeight = 844){
+      threshold = window.innerHeight * 4;
+    }
+    else{
+      threshold = window.innerHeight * 3.9;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 5.1;
+    }
+    else{
+      threshold = window.innerHeight * 4.4;
+    } // set threshold to 50% of viewport height for mobile screens
   }
   else if (window.innerWidth < 321 && window.innerWidth > 0) {
-    threshold = window.innerHeight * 3.4; // set threshold to 50% of viewport height for mobile screens
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 5.7;
+    }
+    else{
+      threshold = window.innerHeight * 3.4;
+    } // set threshold to 50% of viewport height for mobile screens
   }
   else {
     threshold = window.innerHeight * 2.4; // set threshold to 70% of viewport height for desktop screens
@@ -258,6 +392,75 @@ const handleScrollYOver1900 = () => {
 };
 
 window.addEventListener('scroll', handleScrollYOver1900);
+
+const handleScrollYOver2000 = () => {
+  let threshold;
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 3.7;
+    }
+    else{
+      threshold = window.innerHeight * 3.9; // set threshold to 50% of viewport height for mobile screens
+    }
+  }
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 1.4;
+    }
+    else{
+      threshold = window.innerHeight * 1.4;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 2.5;
+  }
+  else if (window.innerWidth < 1280 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 3.7;
+  }
+  else if (window.innerWidth < 769 && window.innerWidth > 429) {
+      threshold = window.innerHeight * 3.8; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 429 && window.innerHeight > 925 && window.innerWidth > 425) {
+    threshold = window.innerHeight * 3.2; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 426 && window.innerWidth > 375) {
+    threshold = window.innerHeight * 3.6; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 4.4;
+    }
+    else{
+      threshold = window.innerHeight * 4;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 321 && window.innerWidth > 0) {
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 5.2;
+    }
+    else{
+      threshold = window.innerHeight * 2.9;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else {
+    threshold = window.innerHeight * 2.9; // set threshold to 70% of viewport height for desktop screens
+  }
+  
+  if (window.scrollY > threshold) {
+    // add classes to elements
+      scrollnamemain5.forEach(element => {
+        element.classList.add('name-main');
+      });
+      scrollblockbox9.forEach(element => {
+        element.classList.add('blockbox', 'visible');
+      });
+    // remove event listener after it is triggered
+    window.removeEventListener('scroll', handleScrollYOver2000);
+  }
+};
+
+window.addEventListener('scroll', handleScrollYOver2000);
+
 
 // const handleScrollYOver1700 = () => {
 // const threshold = window.innerHeight * 2.4; // set threshold to 80% of viewport height
@@ -280,106 +483,399 @@ window.addEventListener('scroll', handleScrollYOver1900);
 // }
 // };
 
-const handleScrollYOver2000 = () => {
-const threshold = window.innerHeight * 2.9; // set threshold to 80% of viewport height
-if (window.scrollY > threshold) {
-    // add classes to elements
-    scrollnamemain5.forEach(element => {
-    element.classList.add('name-main');
-    });
-    scrollblockbox9.forEach(element => {
-    element.classList.add('blockbox', 'visible');
-    });
-    // remove event listener after it is triggered
-    window.removeEventListener('scroll', handleScrollYOver2000);
-}
-};
+// const handleScrollYOver2000 = () => {
+// const threshold = window.innerHeight * 2.9; // set threshold to 80% of viewport height
+// if (window.scrollY > threshold) {
+//     // add classes to elements
+//     scrollnamemain5.forEach(element => {
+//     element.classList.add('name-main');
+//     });
+//     scrollblockbox9.forEach(element => {
+//     element.classList.add('blockbox', 'visible');
+//     });
+//     // remove event listener after it is triggered
+//     window.removeEventListener('scroll', handleScrollYOver2000);
+// }
+// };
 
 const handleScrollYOver2200 = () => {
-const threshold = window.innerHeight * 3.45; // set threshold to 80% of viewport height
-if (window.scrollY > threshold) {
+  let threshold;
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 4;
+    }
+    else{
+      threshold = window.innerHeight * 4; // set threshold to 50% of viewport height for mobile screens
+    }
+  }
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 1.6;
+    }
+    else{
+      threshold = window.innerHeight * 1.6;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 3;
+  }
+  else if (window.innerWidth < 769 && window.innerWidth > 530) {
+      threshold = window.innerHeight * 5.3; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 429 && window.innerHeight > 925 && window.innerWidth > 425) {
+    threshold = window.innerHeight * 4.4; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 426 && window.innerWidth > 375) {
+    threshold = window.innerHeight * 4.4; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 5.7;
+    }
+    else{
+      threshold = window.innerHeight * 5;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 321 && window.innerWidth > 0) {
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 6.4;
+    }
+    else{
+      threshold = window.innerHeight * 3.35;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else {
+    threshold = window.innerHeight * 3.35; // set threshold to 70% of viewport height for desktop screens
+  }
+  
+  if (window.scrollY > threshold) {
     // add classes to elements
-    scrollnamemain6.forEach(element => {
-    element.classList.add('name-main');
-    });
-    scrollblockbox10.forEach(element => {
-    element.classList.add('blockbox2', 'visible');
-    });
+      scrollnamemain6.forEach(element => {
+        element.classList.add('name-main');
+      });
+      scrollblockbox10.forEach(element => {
+        element.classList.add('blockbox2', 'visible');
+      });
     // remove event listener after it is triggered
     window.removeEventListener('scroll', handleScrollYOver2200);
-}
+  }
 };
+
+window.addEventListener('scroll', handleScrollYOver2200);
+
+// const handleScrollYOver2200 = () => {
+// const threshold = window.innerHeight * 3.45; // set threshold to 80% of viewport height
+// if (window.scrollY > threshold) {
+//     // add classes to elements
+//     scrollnamemain6.forEach(element => {
+//     element.classList.add('name-main');
+//     });
+//     scrollblockbox10.forEach(element => {
+//     element.classList.add('blockbox2', 'visible');
+//     });
+//     // remove event listener after it is triggered
+//     window.removeEventListener('scroll', handleScrollYOver2200);
+// }
+// };
 
 const handleScrollYOver2400 = () => {
-const threshold = window.innerHeight * 4.25; // set threshold to 80% of viewport height
-if (window.scrollY > threshold) {
+  let threshold;
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 5;
+    }
+    else{
+      threshold = window.innerHeight * 4.3; // set threshold to 50% of viewport height for mobile screens
+    }
+  }
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 1.9;
+    }
+    else{
+      threshold = window.innerHeight * 1.9; // set threshold to 50% of viewport height for mobile screens
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 3.9;
+  }
+  else if (window.innerWidth < 769 && window.innerWidth > 530) {
+      threshold = window.innerHeight * 6.2; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 429 && window.innerHeight > 925 && window.innerWidth > 425) {
+    threshold = window.innerHeight * 5.1; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 426 && window.innerWidth > 375) {
+    if (window.innerHeight = 844){
+      threshold = window.innerHeight * 5.2;
+    }
+    else{
+      threshold = window.innerHeight * 4.1;
+    }
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 6.4;
+    }
+    else{
+      threshold = window.innerHeight * 4.1;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 321 && window.innerWidth > 0) {
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 7.1;
+    }
+    else{
+      threshold = window.innerHeight * 4.1;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else {
+    threshold = window.innerHeight * 4.1; // set threshold to 70% of viewport height for desktop screens
+  }
+  
+  if (window.scrollY > threshold) {
     // add classes to elements
-    scrollanimation3.forEach(element => {
-    element.classList.add('slide-up', 'visible');
-    });
-    scrollnamemain7.forEach(element => {
-    element.classList.add('name-main');
-    });
-    scrollblockbox11.forEach(element => {
-    element.classList.add('blockbox', 'visible');
-    });
-    scrollblockbox12.forEach(element => {
-    element.classList.add('blockbox2', 'visible');
-    });
+      scrollanimation3.forEach(element => {
+        element.classList.add('slide-up', 'visible');
+      });
+      scrollnamemain7.forEach(element => {
+        element.classList.add('name-main');
+      });
+      scrollblockbox11.forEach(element => {
+        element.classList.add('blockbox', 'visible');
+      });
+      scrollblockbox12.forEach(element => {
+        element.classList.add('blockbox2', 'visible');
+      });
     // remove event listener after it is triggered
     window.removeEventListener('scroll', handleScrollYOver2400);
-}
+  }
 };
+
+window.addEventListener('scroll', handleScrollYOver2400);
+
+// const handleScrollYOver2400 = () => {
+// const threshold = window.innerHeight * 4.1; // set threshold to 80% of viewport height
+// if (window.scrollY > threshold) {
+//     // add classes to elements
+//     scrollanimation3.forEach(element => {
+//     element.classList.add('slide-up', 'visible');
+//     });
+//     scrollnamemain7.forEach(element => {
+//     element.classList.add('name-main');
+//     });
+//     scrollblockbox11.forEach(element => {
+//     element.classList.add('blockbox', 'visible');
+//     });
+//     scrollblockbox12.forEach(element => {
+//     element.classList.add('blockbox2', 'visible');
+//     });
+//     // remove event listener after it is triggered
+//     window.removeEventListener('scroll', handleScrollYOver2400);
+// }
+// };
 
 const handleScrollYOver2600 = () => {
-const threshold = window.innerHeight * 5; // set threshold to 80% of viewport height
-if (window.scrollY > threshold) {
+  let threshold;
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 5.45;
+    }
+    else{
+      threshold = window.innerHeight * 4.85; // set threshold to 50% of viewport height for mobile screens
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 2.4;
+    }
+    else{
+      threshold = window.innerHeight * 4.85; // set threshold to 50% of viewport height for mobile screens
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 4.6;
+  }
+  else if (window.innerWidth < 769 && window.innerWidth > 530) {
+    if (window.innerHeight = 1024){
+      threshold = window.innerHeight * 6.6;
+    }
+    else{
+      threshold = window.innerHeight * 4.85;
+    }
+  }
+  else if (window.innerWidth < 429 && window.innerHeight > 925 && window.innerWidth > 425) {
+    threshold = window.innerHeight * 5.6; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 426 && window.innerWidth > 375) {
+    threshold = window.innerHeight * 5.8; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 7.2;
+    }
+    else{
+      threshold = window.innerHeight * 4.85;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 321 && window.innerWidth > 0) {
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 7.8;
+    }
+    else{
+      threshold = window.innerHeight * 4.85;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else {
+    threshold = window.innerHeight * 4.85; // set threshold to 70% of viewport height for desktop screens
+  }
+  
+  if (window.scrollY > threshold) {
     // add classes to elements
-    scrollanimation4.forEach(element => {
-    element.classList.add('slide-up', 'visible');
-    });
-    scrollnamemain8.forEach(element => {
-    element.classList.add('name-main');
-    });
-    scrollblockbox13.forEach(element => {
-    element.classList.add('blockbox', 'visible');
-    });
-    scrollblockbox14.forEach(element => {
-    element.classList.add('blockbox2', 'visible');
-    });
+      scrollanimation4.forEach(element => {
+        element.classList.add('slide-up', 'visible');
+      });
+      scrollnamemain8.forEach(element => {
+        element.classList.add('name-main');
+      });
+      scrollblockbox13.forEach(element => {
+        element.classList.add('blockbox', 'visible');
+      });
+      scrollblockbox14.forEach(element => {
+        element.classList.add('blockbox2', 'visible');
+      });
     // remove event listener after it is triggered
     window.removeEventListener('scroll', handleScrollYOver2600);
-}
+  }
 };
+
+window.addEventListener('scroll', handleScrollYOver2600);
+
+// const handleScrollYOver2600 = () => {
+// const threshold = window.innerHeight * 4.85; // set threshold to 80% of viewport height
+// if (window.scrollY > threshold) {
+//     // add classes to elements
+//     scrollanimation4.forEach(element => {
+//     element.classList.add('slide-up', 'visible');
+//     });
+//     scrollnamemain8.forEach(element => {
+//     element.classList.add('name-main');
+//     });
+//     scrollblockbox13.forEach(element => {
+//     element.classList.add('blockbox', 'visible');
+//     });
+//     scrollblockbox14.forEach(element => {
+//     element.classList.add('blockbox2', 'visible');
+//     });
+//     // remove event listener after it is triggered
+//     window.removeEventListener('scroll', handleScrollYOver2600);
+// }
+// };
 
 const handleScrollYOver3000 = () => {
-const threshold = window.innerHeight * 5.8; // set threshold to 80% of viewport height
-if (window.scrollY > threshold) {
+  let threshold;
+  if (window.innerWidth < 1025 && window.innerWidth > 820) {
+    if (window.innerHeight = 600){
+      threshold = window.innerHeight * 6.6;
+    }
+    else{
+      threshold = window.innerHeight * 5.7; // set threshold to 50% of viewport height for mobile screens
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 821 && window.innerWidth > 768) {
+    if (window.innerHeight = 1180){
+      threshold = window.innerHeight * 2.8;
+    }
+    else{
+      threshold = window.innerHeight * 5.7; // set threshold to 50% of viewport height for mobile screens
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
+    threshold = window.innerHeight * 5;
+  }
+  else if (window.innerWidth < 769 && window.innerWidth > 530) {
+    if (window.innerHeight = 1024){
+      threshold = window.innerHeight * 7;
+    }
+    else{
+      threshold = window.innerHeight * 5.7;
+    }
+  }
+  else if (window.innerWidth < 429 && window.innerHeight > 925 && window.innerWidth > 425) {
+    threshold = window.innerHeight * 6.3; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 426 && window.innerWidth > 375) {
+    threshold = window.innerHeight * 6.4; // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 376 && window.innerWidth > 320) {
+    if (window.innerHeight = 667){
+      threshold = window.innerHeight * 7.9;
+    }
+    else{
+      threshold = window.innerHeight * 5.7;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else if (window.innerWidth < 321 && window.innerWidth > 0) {
+    if (window.innerHeight = 568){
+      threshold = window.innerHeight * 9.2;
+    }
+    else{
+      threshold = window.innerHeight * 5.7;
+    } // set threshold to 50% of viewport height for mobile screens
+  }
+  else {
+    threshold = window.innerHeight * 5.7; // set threshold to 70% of viewport height for desktop screens
+  }
+  
+  if (window.scrollY > threshold) {
     // add classes to elements
-    scrollanimation5.forEach(element => {
-    element.classList.add('slide-up', 'visible');
-    });
-    scrollnamemain9.forEach(element => {
-    element.classList.add('name-main');
-    });
-    scrollblockbox15.forEach(element => {
-    element.classList.add('blockbox', 'visible');
-    });
-    scrollblockbox16.forEach(element => {
-    element.classList.add('blockbox2', 'visible');
-    });
+      scrollanimation5.forEach(element => {
+        element.classList.add('slide-up', 'visible');
+      });
+      scrollnamemain9.forEach(element => {
+        element.classList.add('name-main');
+      });
+      scrollblockbox15.forEach(element => {
+        element.classList.add('blockbox', 'visible');
+      });
+      scrollblockbox16.forEach(element => {
+        element.classList.add('blockbox2', 'visible');
+      });
     // remove event listener after it is triggered
     window.removeEventListener('scroll', handleScrollYOver3000);
-}
+  }
 };
 
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('scroll', handleScrollYOver1000);
-window.addEventListener('scroll', handleScrollYOver1300);
-window.addEventListener('scroll', handleScrollYOver1700);
-window.addEventListener('scroll', handleScrollYOver2000);
-window.addEventListener('scroll', handleScrollYOver2200);
-window.addEventListener('scroll', handleScrollYOver2400);
-window.addEventListener('scroll', handleScrollYOver2600);
 window.addEventListener('scroll', handleScrollYOver3000);
+
+// const handleScrollYOver3000 = () => {
+// const threshold = window.innerHeight * 5.7; // set threshold to 80% of viewport height
+// if (window.scrollY > threshold) {
+//     // add classes to elements
+//     scrollanimation5.forEach(element => {
+//     element.classList.add('slide-up', 'visible');
+//     });
+//     scrollnamemain9.forEach(element => {
+//     element.classList.add('name-main');
+//     });
+//     scrollblockbox15.forEach(element => {
+//     element.classList.add('blockbox', 'visible');
+//     });
+//     scrollblockbox16.forEach(element => {
+//     element.classList.add('blockbox2', 'visible');
+//     });
+//     // remove event listener after it is triggered
+//     window.removeEventListener('scroll', handleScrollYOver3000);
+// }
+// };
+
+
+// window.addEventListener('scroll', handleScroll);
+// window.addEventListener('scroll', handleScrollYOver1000);
+// window.addEventListener('scroll', handleScrollYOver1300);
+// window.addEventListener('scroll', handleScrollYOver1700);
+// window.addEventListener('scroll', handleScrollYOver2000);
+// window.addEventListener('scroll', handleScrollYOver2200);
+// window.addEventListener('scroll', handleScrollYOver2400);
+// window.addEventListener('scroll', handleScrollYOver2600);
+// window.addEventListener('scroll', handleScrollYOver3000);
