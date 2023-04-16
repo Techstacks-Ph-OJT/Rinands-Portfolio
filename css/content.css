@@ -630,6 +630,20 @@
     background: linear-gradient(93deg, rgba(36,39,52,1) 0%, rgba(22,23,32,1) 100%);
 }
 
+.inputs-style{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: none; /* Remove the default outline */
+}
+input:focus::placeholder, textarea:focus::placeholder {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
 /* adding colors and others */
 
 .add-white{

@@ -19,14 +19,14 @@
         <div>
             <header class="header" id="header">
                 <div class="left-section">
-                    <img class="logo-img" alt="logo" src="img/logo.png">
+                    <a href="index.html" style="text-decoration: none; cursor: pointer;"><img class="logo-img" alt="logo" src="img/logo.png"></a>
                 </div>
                 <div class="right-section">
                     <div class="header-link">
                         <a class="hover-underline-animation" href="index.html">Home</a>
                     </div>
                     <div class="header-link">
-                        <a class="hover-underline-animation" href="about.html">About</a>
+                        <a class="hover-underline-animation" href="contact.html">Contact</a>
                     </div>
                     <div class="header-link">
                         <a class="hover-underline-animation" href="portfolio.html">Portfolio</a>
@@ -44,7 +44,7 @@
         </div>
         <header class="navbar transparent" id="navbar">
             <div class="left-section-block left-section-nonblock">
-                <img class="logo-img" alt="logo" src="img/logo.png">
+                <a href="index.html" style="text-decoration: none; cursor: pointer;"><img class="logo-img" alt="logo" src="img/logo.png"></a>
             </div>
             <div class="hamburger-menu-block" onclick="toggleMenusecond()">
                 <span class="line"></span>
@@ -518,32 +518,37 @@
                         <div class="scroll-blockbox-animation16"></div>
                         <div class="title-container pre-space scroll-name-main9">Estimate your project? Let me know here.</div>
                     </div>
+                    <form action="https://formspree.io/f/mnqyokjd" method="POST">
                     <div class="flex-container">
                         <div class="blog-container">
-                            <div class="blockbox-helping-container-another3">
-                                <div class="scroll-animation-slide-up5">
-                                    <div class="semi-title scroll-name-main9">What's your name?</div>
+                            <div class="blockbox-helping-container-another3" style="width: 100%;">
+                                <div class="scroll-animation-slide-up5" style="width: 100%;">
+                                    <input type="text" id="input1" name="Name" class="semi-title scroll-name-main9 inputs-style" placeholder="What's your name?" required>
+                                    <!-- <div class="semi-title scroll-name-main9">What's your name?</div> -->
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="blockbox-helping-container-another3">
-                                <div class="scroll-animation-slide-up5">
-                                    <div class="semi-title scroll-name-main9">Your fancy email</div>
+                            <div class="blockbox-helping-container-another3" style="width: 100%;">
+                                <div class="scroll-animation-slide-up5" style="width: 100%;">
+                                    <input type="email" id="input2" name="Email" class="semi-title scroll-name-main9 inputs-style" placeholder="Your fancy email" required>
+                                    <!-- <div class="semi-title scroll-name-main9">Your fancy email</div> -->
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <div class="blog-container">
-                            <div class="blockbox-helping-container-another3">
-                                <div class="scroll-animation-slide-up5 flex-row">
-                                    <div class="semi-title scroll-name-main9">Tell me about your project</div>
-                                    <div><button class="button scroll-name-main9 button-arrow-hover">&#8594</button></div>
+                            <div class="blockbox-helping-container-another3" style="width: 100%;">
+                                <div class="scroll-animation-slide-up5 flex-row" style="width: 100%;">
+                                    <textarea id="input3" class="semi-title scroll-name-main9 inputs-style" name="Message" placeholder="Tell me about your project" required></textarea>
+                                    <!-- <div class="semi-title scroll-name-main9">Tell me about your project</div> -->
+                                    <div><button type="submit" class="button scroll-name-main9 button-arrow-hover">&#8594</button></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </main>
@@ -578,5 +583,16 @@
             document.getElementById("navbar").style.top = "-100%";
           }
         }
+
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+        const input3 = document.getElementById("input3");
+
+        window.addEventListener("pageshow", function(event) {
+        // Reset input field values
+        input1.value = "";
+        input2.value = "";
+        input3.value = "";
+        });
     </script>
 </html>

@@ -1,17 +1,135 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<div>
-		<h1>Contact Form</h1>
-		<form action="https://formspree.io/f/mnqyokjd" method="POST">
-			<input type="text" name="Name" placeholder="Full Name" required>
-			<input type="email" name="Email" placeholder="Email" required>
-			<textarea name="Message" placeholder="Message" required></textarea>
-			<button type="submit">Send</button>
-		</form>
-	</div>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mads</title>
+        <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/content.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/hamburger.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/preloader.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    </head>
+    <body>
+        <div>
+            <header class="header" id="header">
+                <div class="left-section">
+                    <a href="index.html" style="text-decoration: none; cursor: pointer;"><img class="logo-img" alt="logo" src="img/logo.png"></a>
+                </div>
+                <div class="right-section">
+                    <div class="header-link">
+                        <a class="hover-underline-animation" href="index.html">Home</a>
+                    </div>
+                    <div class="header-link">
+                        <a class="hover-underline-animation" href="contact.html">Contact</a>
+                    </div>
+                    <div class="header-link">
+                        <a class="hover-underline-animation" href="portfolio.html">Portfolio</a>
+                    </div>
+                    <div class="header-link">
+                        <a class="hover-underline-animation" href="blog.html">Blog</a>
+                    </div>
+                </div>
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </header>
+        </div>
+        <header class="navbar transparent" id="navbar">
+            <div class="left-section-block left-section-nonblock">
+                <a href="index.html" style="text-decoration: none; cursor: pointer;"><img class="logo-img" alt="logo" src="img/logo.png"></a>
+            </div>
+            <div class="hamburger-menu-block" onclick="toggleMenusecond()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </header>
+        <div class="sidebar">
+            <ul>
+                <li><a class="link" href="index.html">home</a></li>
+                <li><a class="link" href="contact.html">contact</a></li>
+                <li><a class="link" href="portfolio.html">portfolio</a></li>
+                <li><a class="link" href="blog.html">blogs</a></li>
+            </ul>
+              <div class="small-size">@ 2023 John Rinand Sta. Ines</div>
+        </div>
+        <main>
+            <form action="https://formspree.io/f/mnqyokjd" method="POST">
+                <div class="contact-first-main">
+                    <div class="contact-form-container">
+                        <div class="contact-content">
+                            <div class="name-container opacity">Get in Touch.</div>
+                            <div class="para-container opacity">Do you fancy saying hi to me or you want to get started with your project and you need
+                            my help? Feel free to contact me.</div>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="input1" name="Name" placeholder="Your Name" class="semi-title inputs-style opacity" required>
+                            <hr>
+                            <input type="email" id="input2" name="Email" placeholder="Your Email" class="semi-title inputs-style opacity" required>
+                            <hr>
+                            <input type="text" id="input3" name="Subject" placeholder="Subject" class="semi-title inputs-style opacity" required>
+                            <hr>
+                            <textarea name="Message" rows="5" cols="40" id="input4" placeholder="Message" class="semi-title opacity inputs-style" required></textarea>
+                            <hr>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" class="button opacity">Submit</button>
+                            <button type="submit" class="button opacity button-arrow-hover">&#8594</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="with-logo">
+                    <img class="logo-img" alt="logo" src="img/logo.png">
+                    <div class="para-footer-container"><strong class="add-white">Thank you for scrolling,</strong> that's all folks</div>
+                </div>
+                <div class="icon-container">
+                    <a href="https://www.facebook.com/johnrinand/"><img class="icon" alt="facebook" src="img/facebook.svg"></a>
+                    <a href="https://www.instagram.com/madstaines/"><img class="icon" alt="instagram" src="img/instagram.svg"></a>
+                    <a href="https://www.linkedin.com/in/johnrinandstaines/"><img class="icon" alt="linkedin" src="img/linkedin.svg"></a>
+                    <a href="https://github.com/Richieymaru"><img class="icon" alt="github" src="img/github.svg"></a>
+                </div>
+            </div>
+        </footer>
+        <div class="bottom-line"></div>
+    </body>
+    <script src="js/hamburger.js"></script>
+    <script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar").style.display = "flex";
+          } else {
+            document.getElementById("navbar").style.top = "-100%";
+          }
+        }
+
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+        const input3 = document.getElementById("input3");
+        const input4 = document.getElementById("input4");
+
+        window.addEventListener("pageshow", function(event) {
+        // Reset input field values
+        input1.value = "";
+        input2.value = "";
+        input3.value = "";
+        input4.value = "";
+        });
+    </script>
 </html>
