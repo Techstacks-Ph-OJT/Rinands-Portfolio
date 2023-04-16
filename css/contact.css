@@ -35,6 +35,10 @@ input:focus::placeholder, textarea:focus::placeholder {
     flex-direction: column;
 }
 
+.button-container{
+    justify-content: flex-end;
+}
+
 @media (max-width: 353px) {
     .name-container{
         line-height: 50px;
