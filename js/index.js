@@ -146,7 +146,7 @@ const handleScrollYOver1000 = () => {
         threshold = window.innerHeight * 2.9; // set threshold to 50% of viewport height for mobile screens
     }
     else {
-      threshold = window.innerHeight * 1.3; // set threshold to 70% of viewport height for desktop screens
+      threshold = window.innerHeight * 1.1; // set threshold to 70% of viewport height for desktop screens
     }
     
     if (window.scrollY > threshold) {
@@ -214,7 +214,7 @@ const handleScrollYOver1300 = () => {
         threshold = window.innerHeight * 3.6; // set threshold to 50% of viewport height for mobile screens
     }
     else {
-      threshold = window.innerHeight * 1.7; // set threshold to 70% of viewport height for desktop screens
+      threshold = window.innerHeight * 1.6; // set threshold to 70% of viewport height for desktop screens
     }
     
     if (window.scrollY > threshold) {
