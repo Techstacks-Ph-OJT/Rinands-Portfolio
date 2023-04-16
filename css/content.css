@@ -886,8 +886,8 @@
 	stroke: var(--color2);
 	fill: transparent;
 	stroke-width: 1px;	
-	animation: arrow 2s infinite;
-	-webkit-animation: arrow 2s infinite; 
+	-webkit-animation: arrow 2s infinite;
+	animation: arrow 2s infinite; 
 }
 
 @keyframes arrow
@@ -905,16 +905,16 @@
     100% {opacity:0}
 }
 .arrows path.a1 {
-	animation-delay:-1s;
-	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+	-webkit-animation-delay:-1s;
+	animation-delay:-1s; /* Safari 和 Chrome */
 }
 .arrows path.a2 {
-	animation-delay:-0.5s;
-	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+	-webkit-animation-delay:-0.5s;
+	animation-delay:-0.5s; /* Safari 和 Chrome */
 }
 .arrows path.a3 {	
-	animation-delay:0s;
-	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+	-webkit-animation-delay:0s;
+	animation-delay:0s; /* Safari 和 Chrome */
 }
 
 /* animation letter */

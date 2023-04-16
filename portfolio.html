@@ -44,6 +44,16 @@
                 </div>
             </header>
         </div>
+        <header class="navbar transparent" id="navbar">
+            <div class="left-section-block left-section-nonblock">
+                <img class="logo-img" alt="logo" src="img/logo.png">
+            </div>
+            <div class="hamburger-menu-block" onclick="toggleMenusecond()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </header>
         <div class="sidebar">
             <ul>
                 <li><a class="link" href="index.html">home</a></li>
@@ -51,7 +61,7 @@
                 <li><a class="link" href="portfolio.html">portfolio</a></li>
                 <li><a class="link" href="blog.html">blogs</a></li>
             </ul>
-            <div class="small-size">@ 2023 John Rinand Sta. Ines</div>
+              <div class="small-size">@ 2023 John Rinand Sta. Ines</div>
         </div>
         <main>
             <div class="project-first-main">
@@ -59,7 +69,7 @@
             </div>
             <div class="project-second-main">
                 <div class="inside2-second-container">
-                    <div class="dev-img">
+                    <div class="dev-img opacity">
                         <img class="proj-img" alt="filanthropy" src="img/proj1.jpg">
                     </div>
                     <div class="contentBx">
@@ -74,13 +84,13 @@
                     <div class="web-content-container">
                         <div class="web-name">
                             <div class="outlined-white">filanthropy</div>
-                            <div class="semi-title">Product, Development</div>
+                            <div class="semi-title opacity">Product, Development</div>
                         </div>
-                        <div class="para-container">A Fundraising Web System with in-kind donation inspired by GofundMe.</div>
+                        <div class="para-container opacity">A Fundraising Web System with in-kind donation inspired by GofundMe.</div>
                     </div>
                     <div class="button-container">
-                        <button class="button">view project</button>
-                        <button class="button button-arrow-hover">&#8594</button>
+                        <button class="button opacity"><a class="add-yellow" href="https://drive.google.com/drive/folders/1vHJCwSfLZ0CeEDbNByMcX91nJzaHgn2H?usp=sharing">view project</a></button>
+                        <button class="button opacity button-arrow-hover"><a class="add-yellow" href="https://drive.google.com/drive/folders/1vHJCwSfLZ0CeEDbNByMcX91nJzaHgn2H?usp=sharing">&#8594</a></button>
                     </div>
                 </div>
             </div>
@@ -89,17 +99,17 @@
                     <div class="web-content-container">
                         <div class="web-name">
                             <div class="outlined-white">the crow</div>
-                            <div class="semi-title">Branding, Development</div>
+                            <div class="semi-title opacity">Branding, Development</div>
                         </div>
-                        <div class="para-container">Random UI/UX design inspired by Crow and created using Figma</div>
+                        <div class="para-container opacity">Random UI/UX design inspired by Crow and created using Figma</div>
                     </div>
                     <div class="button-container">
-                        <button class="button">view project</button>
-                        <button class="button button-arrow-hover">&#8594</button>
+                        <button class="button opacity"><a class="add-yellow" href="https://www.figma.com/proto/gGpqSrl0jsEE5sAXjzUsgM/Untitled?node-id=1-2">view project</a></button>
+                        <button class="button opacity button-arrow-hover"><a class="add-yellow" href="https://www.figma.com/proto/gGpqSrl0jsEE5sAXjzUsgM/Untitled?node-id=1-2">&#8594</a></button>
                     </div>
                 </div>
                 <div class="inside2-second-container">
-                    <div class="dev-img">
+                    <div class="dev-img opacity">
                         <img class="proj-img" alt="filanthropy" src="img/proj2.jpg">
                     </div>
                     <div class="contentBx">
@@ -113,7 +123,7 @@
             </div>
             <div class="project-fourth-main">
                 <div class="inside2-second-container">
-                    <div class="dev-img">
+                    <div class="dev-img opacity">
                         <img class="proj-img" alt="filanthropy" src="img/proj3.jpg">
                     </div>
                     <div class="contentBx">
@@ -128,13 +138,13 @@
                     <div class="web-content-container">
                         <div class="web-name">
                             <div class="outlined-white">youtube cloning</div>
-                            <div class="semi-title">Cloning, Development</div>
+                            <div class="semi-title opacity">Cloning, Development</div>
                         </div>
-                        <div class="para-container">A simple clone system inspired by SuperSimpleDev Youtube Tutorial.</div>
+                        <div class="para-container opacity">A simple clone system inspired by SuperSimpleDev Youtube Tutorial.</div>
                     </div>
                     <div class="button-container">
-                        <button class="button">view project</button>
-                        <button class="button button-arrow-hover">&#8594</button>
+                        <button class="button opacity"><a class="add-yellow" href="https://richieymaru.github.io/Youtube-Clone/">view project</a></button>
+                        <button class="button opacity button-arrow-hover"><a class="add-yellow" href="https://richieymaru.github.io/Youtube-Clone/">&#8594</a></button>
                     </div>
                 </div>
             </div>
@@ -144,7 +154,7 @@
                 </div>
             </div>
             <div class="project-sixth-main">
-                <div class="para-container">
+                <div class="para-container opacity">
                     Here are some of my projects that I created during my spare time. 
                     I constantly keep on improving my skills by making these fun projects. 
                     These projects are available on my 
@@ -229,4 +239,17 @@
         <div class="bottom-line"></div>
     </body>
     <script src="js/hamburger.js"></script>
+    <script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar").style.display = "flex";
+          } else {
+            document.getElementById("navbar").style.top = "-100%";
+          }
+        }
+    </script>
 </html>
