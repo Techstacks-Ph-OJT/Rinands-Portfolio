@@ -411,9 +411,6 @@ const handleScrollYOver2000 = () => {
       threshold = window.innerHeight * 1.4;
     } // set threshold to 50% of viewport height for mobile screens
   }
-  else if (window.innerWidth <1441 && window.innerWidth > 1024) {
-    threshold = window.innerHeight * 2.5;
-  }
   else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
     threshold = window.innerHeight * 2.5;
   }
@@ -522,9 +519,6 @@ const handleScrollYOver2200 = () => {
   else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
     threshold = window.innerHeight * 3;
   }
-  else if (window.innerWidth <1441 && window.innerWidth > 1024) {
-    threshold = window.innerHeight * 2.9;
-  }
   else if (window.innerWidth < 769 && window.innerWidth > 530) {
       threshold = window.innerHeight * 5.3; // set threshold to 50% of viewport height for mobile screens
   }
@@ -604,9 +598,6 @@ const handleScrollYOver2400 = () => {
   }
   else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
     threshold = window.innerHeight * 3.9;
-  }
-  else if (window.innerWidth <1441 && window.innerWidth > 1024) {
-    threshold = window.innerHeight * 3.4;
   }
   else if (window.innerWidth < 769 && window.innerWidth > 530) {
       threshold = window.innerHeight * 6.2; // set threshold to 50% of viewport height for mobile screens
@@ -701,9 +692,6 @@ const handleScrollYOver2600 = () => {
     else{
       threshold = window.innerHeight * 4.85; // set threshold to 50% of viewport height for mobile screens
     } // set threshold to 50% of viewport height for mobile screens
-  }
-  else if (window.innerWidth <1441 && window.innerWidth > 1024) {
-    threshold = window.innerHeight * 4.1;
   }
   else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
     threshold = window.innerHeight * 4.6;
@@ -801,9 +789,6 @@ const handleScrollYOver3000 = () => {
     else{
       threshold = window.innerHeight * 5.7; // set threshold to 50% of viewport height for mobile screens
     } // set threshold to 50% of viewport height for mobile screens
-  }
-  else if (window.innerWidth <1441 && window.innerWidth > 1024) {
-    threshold = window.innerHeight * 4.8;
   }
   else if (window.innerWidth < 1281 && window.innerWidth > 1024) {
     threshold = window.innerHeight * 5;
